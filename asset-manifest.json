@@ -1,19 +1,31 @@
 {
   "files": {
     "main.css": "/static/css/main.c688a061.css",
-    "main.js": "/static/js/main.5ba62467.js",
+    "main.js": "/static/js/main.f286d1aa.js",
     "static/js/304.41c0c51b.chunk.js": "/static/js/304.41c0c51b.chunk.js",
-    "static/js/338.b9de6211.chunk.js": "/static/js/338.b9de6211.chunk.js",
     "static/js/413.c4aa4a87.chunk.js": "/static/js/413.c4aa4a87.chunk.js",
     "static/js/163.699d4226.chunk.js": "/static/js/163.699d4226.chunk.js",
-    "static/js/364.f5b2a738.chunk.js": "/static/js/364.f5b2a738.chunk.js",
+    "static/js/364.9490a6e0.chunk.js": "/static/js/364.9490a6e0.chunk.js",
     "static/media/u-said-it-v13-1167(high bitrate).mp3": "/static/media/u-said-it-v13-1167(high bitrate).949cee7ea4a6ad9499db.mp3",
+    "static/media/Ar.png": "/static/media/Ar.f72d40df3f96d580998b.png",
     "static/media/Ml.png": "/static/media/Ml.db93c4a48060020fefe9.png",
     "static/media/u-said-it-v13-1167.mp3": "/static/media/u-said-it-v13-1167.becd66496be9c81ddf9d.mp3",
+    "static/media/CB.png": "/static/media/CB.462e8508bf93bec21a88.png",
+    "static/media/Lt.png": "/static/media/Lt.6dfa0784867eec5894a6.png",
+    "static/media/POS.png": "/static/media/POS.163a64858dc63921b48c.png",
+    "static/media/Tc.png": "/static/media/Tc.39a54f8d0ed568305227.png",
+    "static/media/Kc.png": "/static/media/Kc.3a53abe205f4476eb9bf.png",
+    "static/media/Ft.png": "/static/media/Ft.232f5ef1a798c50a9c44.png",
     "static/media/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg": "/static/media/patrick-tomasso-Oaqk7qqNh_c-unsplash.8ca90014fb6ce5980110.jpg",
+    "static/media/Bs.png": "/static/media/Bs.c49ad5f1921461637605.png",
+    "static/media/Vt.png": "/static/media/Vt.a2cff0ef7b0bf31a2770.png",
+    "static/media/Bg.png": "/static/media/Bg.c2ca6719cb61fd761ac6.png",
     "static/media/hand.svg": "/static/media/hand.86c7a6f7169a202ec32a6cf631f11ec3.svg",
+    "static/media/Ga.png": "/static/media/Ga.1d2a9805136075384e1d.png",
     "static/media/mypic2.png": "/static/media/mypic2.fb90f93e4d4dfd7221d9.png",
     "static/media/pmj.png": "/static/media/pmj.a6c6e4e29f294af095de.png",
+    "static/media/SM.png": "/static/media/SM.1fc630dc302bd35d4fc0.png",
+    "static/media/LifePill.png": "/static/media/LifePill.ff3fb71512b371c4bed7.png",
     "static/media/mypic.png": "/static/media/mypic.18f2fcf0d447943862e2.png",
     "static/media/spaceman.png": "/static/media/spaceman.5ec7fcfa9a803ead726c.png",
     "static/media/avatar-1.jpg": "/static/media/avatar-1.997fa945f79c3df41e5c.jpg",
@@ -55,15 +67,14 @@
     "static/media/facebook-square-brands.svg": "/static/media/facebook-square-brands.38c6b4e5a1568d1aa181dd4ff5b08e05.svg",
     "static/media/arrow-up.svg": "/static/media/arrow-up.65164624ca1539634ee30e63113402a1.svg",
     "main.c688a061.css.map": "/static/css/main.c688a061.css.map",
-    "main.5ba62467.js.map": "/static/js/main.5ba62467.js.map",
+    "main.f286d1aa.js.map": "/static/js/main.f286d1aa.js.map",
     "304.41c0c51b.chunk.js.map": "/static/js/304.41c0c51b.chunk.js.map",
-    "338.b9de6211.chunk.js.map": "/static/js/338.b9de6211.chunk.js.map",
     "413.c4aa4a87.chunk.js.map": "/static/js/413.c4aa4a87.chunk.js.map",
     "163.699d4226.chunk.js.map": "/static/js/163.699d4226.chunk.js.map",
-    "364.f5b2a738.chunk.js.map": "/static/js/364.f5b2a738.chunk.js.map"
+    "364.9490a6e0.chunk.js.map": "/static/js/364.9490a6e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c688a061.css",
-    "static/js/main.5ba62467.js"
+    "static/js/main.f286d1aa.js"
   ]
 }
