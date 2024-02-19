@@ -10,28 +10,26 @@ import PowerButton from "../subComponents/PowerButton";
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
 import { YinYang } from "./AllSvgs";
-import BigTitlte from "../subComponents/BigTitlte";
+import BigTitle from "../subComponents/BigTitlte";
 import ParticlesComponent from "../subComponents/ParticleComponent";
+import Footer from "../sectionComponents/Footer/Footer";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  height: 400vh;
+  // hight: 400vh;
   position: relative;
   display: flex;
   align-items: center;
+  flex-direction: column; /* Center content in a column */
 `;
 
 const Main = styled(motion.ul)`
-  position: fixed;
-  top: 12rem;
-  left: ${(props) => (props.isSmallScreen ? "0" : "calc(5rem + 5vw)")};
+  position: relative;
   display: flex;
-  color: white;
-
-  /* Adjust the styling for small screens */
-  flex-direction: ${(props) => (props.isSmallScreen ? "column" : "row")};
+  flex-wrap: wrap;
+  justify-content: center; /* Center content horizontally */
+  gap: 5rem;
 `;
-
 
 const Rotate = styled.span`
   display: block;
@@ -55,12 +53,11 @@ const container = {
   },
 };
 
-
 const WorkPage = () => {
   const ref = useRef(null);
   const yinyang = useRef(null);
   const [isSmallScreen, setIsSmallScreen] = useState(
-      window.innerWidth <= 768
+    window.innerWidth <= 768
   );
 
   useEffect(() => {
@@ -95,32 +92,47 @@ const WorkPage = () => {
     };
   }, [isSmallScreen]);
 
-  return (
-      <ThemeProvider theme={isSmallScreen ? lightTheme : DarkTheme}>
-        <Box>
-          <LogoComponent theme="dark" />
-          {/* Conditionally render SocialIcons based on screen size */}
-          {!isSmallScreen && <SocialIcons theme="light" />}
-          <PowerButton />
-          <ParticlesComponent theme="light" />
-          <Main
-              ref={ref}
-              variants={container}
-              initial="hidden"
-              animate="show"
-              isSmallScreen={isSmallScreen}
-          >
-            {Work.map((d) => (
-                <Card key={d.id} data={d} />
-            ))}
-          </Main>
-          <Rotate ref={yinyang}>
-            <YinYang width={80} height={80} fill={DarkTheme.text} />
-          </Rotate>
+  const firstThreeCards = Work.slice(0,0);
+  const remainingCards = Work.slice(0);
 
-          <BigTitlte text="WORK" top="10%" right="20%" />
-        </Box>
-      </ThemeProvider>
+  return (
+    <ThemeProvider theme={isSmallScreen ? DarkTheme : DarkTheme}>
+      <Box>
+        <LogoComponent theme="dark" />
+        {/* Conditionally render SocialIcons based on screen size */}
+        {!isSmallScreen && <SocialIcons theme="light" />}
+        {/* <PowerButton /> */}
+        <ParticlesComponent theme="light" />
+        <Main
+          ref={ref}
+          variants={container}
+          initial="hidden"
+          animate="show"
+          isSmallScreen={isSmallScreen}
+        >
+          {firstThreeCards.map((d) => (
+            <Card key={d.id} data={d} />
+          ))}
+        </Main>
+        <Main
+        variants={container}
+        animate="show"
+        initial = "hidden"
+        >
+          {remainingCards.map((d) => (
+            <Card key={d.id} data={d} />
+          ))}
+        </Main>
+        <Rotate ref={yinyang}>
+          <YinYang width={80} height={80} fill={DarkTheme.text} />
+        </Rotate>
+        <BigTitle text="WORK" top="10%" right="20%" />
+      </Box>
+      <Box>
+        <Footer />
+      </Box >
+      {/* <Footer  /> */}
+    </ThemeProvider>
   );
 };
 
