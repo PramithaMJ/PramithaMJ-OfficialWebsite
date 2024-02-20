@@ -15,6 +15,9 @@ import SoundBar from "./subComponents/SoundBar";
 import NavBar from "./components/NavBar/NavBar";
 import { ContactUs } from "./components/contact/contact";
 import MediaCard from "./pages/Certificates/Certificates";
+import Certificates from "./pages/CertificatesM/Certificates";
+
+
 
 function App() {
   const location = useLocation();
@@ -45,7 +48,10 @@ function App() {
 
             <Route path="/Achievments" element={<MyVerticalTimeline />} />
 
-            <Route path="/Certificates" element={<MediaCard/>} />
+            <Route path="/Certificates" element={<Certificates/>} />
+
+
+
 
             <Route path="/skills" element={<MySkillsPage />} />
             {/* Below is to catch all the other routes and send the user to main component,

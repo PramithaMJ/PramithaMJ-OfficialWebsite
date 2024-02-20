@@ -7,10 +7,16 @@ import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
 import { YinYang } from './AllSvgs'
 import Intro from './Intro'
+import Contact2 from "../Sections/Contact/index";
+
 
 
 import {GlobalStyleM} from "../globalStylesM";
 import MainS from "./MainS";
+import BlogPage from './BlogPage'
+import LatestBlogs from '../pages/LatestBlogs/LatestBlogs'
+import ParticlesComponent from '../subComponents/ParticleComponent'
+import HeroSection from '../Sections/Hero'
 const MHome = lazy(() => import("../pages/Home/MHome"));
 const Header = lazy(() => import("../sectionComponents/Header/HeaderM"));
 const Footer = lazy(() => import("../sectionComponents/Footer/Footer"));
@@ -132,6 +138,26 @@ transition: height 0.5s ease, width 1s ease 0.5s;
 `
 
 
+const Title = styled.h1`
+  color: var(--white);
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  &::before {
+    content: "";
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0.5rem);
+    /* or 100px */
+    border-bottom: 2px solid var(--pink);
+  }
+`;
+
+
 const Main = () => {
 
     const [click, setClick] = useState(false);
@@ -140,12 +166,18 @@ const Main = () => {
 
     return (
         <>
+          {/* <ParticlesComponent /> */}
             <Suspense fallback={null}>
                 {/* <Header /> */}
+                {/* <ParticlesComponent/> */}
+                
                 <MainS />
                 <GlobalStyleM />
                 <ScrollToTop />
                 <MHome />
+                
+            <LatestBlogs />
+            <Contact2/>
                 <Footer />
             </Suspense>
 

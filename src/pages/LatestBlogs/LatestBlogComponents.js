@@ -23,6 +23,12 @@ const Box = styled(motion.a)`
     background-color: ${(props) => props.theme.text};
     transition: all 0.3s ease;
   }
+
+  // Add media query for smaller screens
+  @media screen and (max-width: 480px) {
+    width: calc(10rem + 10vw);
+    padding: 0.5rem;
+  }
 `;
 
 const Image = styled.div`
@@ -44,20 +50,24 @@ const Title = styled.h3`
   font-family: "Karla", sans-serif;
   font-weight: 700;
   border-bottom: 1px solid ${(props) => props.theme.text};
-  overflow-wrap: break-word;  /* Add this line */
 
   ${Box}:hover & {
     border-bottom: 1px solid ${(props) => props.theme.body};
   }
 `;
-
 const HashTags = styled.div`
   padding: 0.5rem 0;
+  overflow: hidden;
+  white-space: nowrap;
 `;
+
 const Tag = styled.span`
   padding-right: 0.5rem;
-  overflow-wrap: break-word;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
+
 const Date = styled.span`
   padding: 0.5rem 0;
 `;
@@ -78,7 +88,7 @@ const Item = {
   },
 };
 
-const BlogComponent = (props) => {
+const LatestBlogComponent = (props) => {
   const { name, tags, date, imgSrc, link } = props.blog;
   return (
     <Container variants={Item}>
@@ -96,4 +106,4 @@ const BlogComponent = (props) => {
   );
 };
 
-export default BlogComponent;
+export default LatestBlogComponent;

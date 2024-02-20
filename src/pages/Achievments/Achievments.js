@@ -7,6 +7,7 @@ import styled, {ThemeProvider} from 'styled-components'
 import { motion } from 'framer-motion'
 import img from "../../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg"
 import ParticlesComponent from '../../subComponents/ParticleComponent';
+import HaXtream from '../../assets/certificates/HaXtream.jpeg'
 
 
 
@@ -53,7 +54,7 @@ const container = {
       }
     }
   }
-// ... (previous imports)
+
 
 const MyVerticalTimeline = () => {
   return (
@@ -75,6 +76,9 @@ const MyVerticalTimeline = () => {
                 className="vertical-timeline-element--work"
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 date="2018 - present"
+                contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+     
+      
                 
               >
                 <h3 className="vertical-timeline-element-title">Ranking No. 1 In Kattis</h3>

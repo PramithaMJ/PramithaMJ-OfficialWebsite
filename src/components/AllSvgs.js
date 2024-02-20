@@ -195,3 +195,40 @@ export const Develope = (props) => {
   )
 
 }
+export const LinkedIn = (props) => {
+  return (
+    <svg
+      aria-hidden="true"
+      data-prefix="fab"
+      data-icon="linkedin-in"
+      className="prefix__svg-inline--fa prefix__fa-linkedin-in prefix__fa-w-14"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 448 512"
+      {...props}
+    >
+      <path
+        fill={props.fill}
+        d="M416 32H31.97C14.33 32 0 46.33 0 64v384c0 17.67 14.33 32 31.97 32H416c17.64 0 32-14.33 32-32V64c0-17.67-14.36-32-32-32zm-144.5 320H216V216h55.47v136h-8.97zm-28.23-153.1c-29.12 0-52.6-23.73-52.6-52.9 0-29.18 23.48-52.9 52.6-52.9 29.13 0 52.6 23.72 52.6 52.9 0 29.17-23.47 52.9-52.6 52.9zm162.3 153.1H344V292.6c0-38.93-14.6-60.73-47.33-60.73-27.37 0-43.97 18.4-51.3 36.94-2.63 6.41-3.26 15.44-3.26 24.39V368H184V216h54.8v25.67h1.54c7.65-14.5 27.8-35.6 57.3-35.6 41.6 0 73.2 27.32 73.2 85.58V368z"
+      />
+    </svg>
+  );
+};
+
+export const Medium = (props) => {
+  return (
+    <svg
+      aria-hidden="true"
+      data-prefix="fab"
+      data-icon="medium-m"
+      className="prefix__svg-inline--fa prefix__fa-medium-m prefix__fa-w-14"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 384 512"
+      {...props}
+    >
+      <path
+        fill={props.fill}
+        d="M160 312V24.13c0-5.82-6.75-8.72-10.72-4.42L8.55 294.34c-2.48 2.82-2.48 7.3 0 10.12L149.28 491.3c3.98 4.5 10.72 1.4 10.72-4.42V360H240v152.13c0 5.82 6.75 8.72 10.72 4.42L375.45 217.66c2.48-2.82 2.48-7.3 0-10.12L234.72 20.7C230.74 16.2 224 19.3 224 24.13V312h-64z"
+      />
+    </svg>
+  );
+};

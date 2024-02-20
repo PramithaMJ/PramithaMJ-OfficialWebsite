@@ -43,6 +43,12 @@ const Grid = styled.div`
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
   }
+
+  // Add media query for smaller screens
+  @media screen and (max-width: 480px) {
+    grid-template-columns: repeat(1, minmax(calc(10rem + 10vw), 1fr));
+    grid-gap: 1rem;
+  }
 `;
 
 const SocialIconsContainer = styled.div`

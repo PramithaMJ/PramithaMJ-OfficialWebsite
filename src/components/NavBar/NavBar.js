@@ -72,7 +72,7 @@ function NavBar() {
             <li className="nav-item">
               <NavLink
                 exact
-                to="/certificates"
+                to="/Certificates"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
@@ -114,6 +114,7 @@ function NavBar() {
                 Contact Me
               </NavLink>
             </li>
+          
           </ul>
           <div className="nav-icon" onClick={handleClick}>
             {/* <i className={click ? "fas fa-times" : "fas fa-bars"}></i> */}

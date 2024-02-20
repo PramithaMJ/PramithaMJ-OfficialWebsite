@@ -1,18 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { DarkTheme, lightTheme } from "./Themes";
+import { DarkTheme, lightTheme } from "../../components/Themes";
 import { motion } from "framer-motion";
-
-import LogoComponent from "../subComponents/LogoComponent";
-import SocialIcons from "../subComponents/SocialIcons";
-import PowerButton from "../subComponents/PowerButton";
-
-import { Work } from "../data/WorkData";
-import Card from "../subComponents/Card";
-import { YinYang } from "./AllSvgs";
-import BigTitle from "../subComponents/BigTitlte";
-import ParticlesComponent from "../subComponents/ParticleComponent";
-import Footer from "../sectionComponents/Footer/Footer";
+import LogoComponent from "../../subComponents/LogoComponent";
+import SocialIcons from "../../subComponents/SocialIcons";
+import { Work } from "../../data/CertificateData";
+import Card from "../../subComponents/Card";
+import { YinYang } from "../../components/AllSvgs";
+import BigTitle from "../../subComponents/BigTitlte";
+import ParticlesComponent from "../../subComponents/ParticleComponent";
+import Footer from "../../sectionComponents/Footer/Footer";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -53,7 +50,7 @@ const container = {
   },
 };
 
-const WorkPage = () => {
+const Certificates = () => {
   const ref = useRef(null);
   const yinyang = useRef(null);
   const [isSmallScreen, setIsSmallScreen] = useState(
@@ -126,7 +123,7 @@ const WorkPage = () => {
         <Rotate ref={yinyang}>
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
-        <BigTitle text="CERTIFICATES" top="10%" right="20%" />
+        <BigTitle text="WORK" top="10%" right="20%" />
       </Box>
       <Box>
         <Footer />
@@ -136,4 +133,4 @@ const WorkPage = () => {
   );
 };
 
-export default WorkPage;
+export default Certificates;

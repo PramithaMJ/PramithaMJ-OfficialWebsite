@@ -8,6 +8,9 @@ import About from "../../Sections/About";
 import Services from "../../Sections/Services";
 import Testimonials from "../../Sections/Testimonials";
 import Contact from "../../Sections/Contact";
+import BlogPage from "../../components/BlogPage";
+import LatestBlogs from "../LatestBlogs/LatestBlogs";
+import ParticlesComponent from "../../subComponents/ParticleComponent";
 
 const Container = styled.div`
   display: flex;
@@ -17,15 +20,41 @@ const Container = styled.div`
   /* position: relative; */
 `;
 
+
+const Title = styled.h1`
+  color: var(--white);
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  &::before {
+    content: "";
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0.5rem);
+    /* or 100px */
+    border-bottom: 2px solid var(--pink);
+  }
+`;
+
 const MHome = () => {
     return (
+      <>
+        {/* <ParticlesComponent /> */}
         <Container>
+          
             <HeroSection />
             <About />
             <Services />
-            {/*<Testimonials />*/}
-            <Contact />
+            {/* <Testimonials /> */}
+            {/* <Title>Latest Blogs...</Title> */}
+            {/* <LatestBlogs /> */}
+            {/* <Contact /> */}
         </Container>
+      </>
     );
 };
 

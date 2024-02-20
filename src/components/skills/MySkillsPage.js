@@ -151,6 +151,37 @@ const MySkillsPage = () => {
                     </Description>
                 </Main>
 
+                <Main>
+                    <Title>
+                        <Design width={40} height={40} />  DevOps
+                    </Title>
+                    <Description>
+                        <ul>
+                           <li>
+                            Docker
+                           </li>
+                            <li>
+                              Kubernetes
+                            </li>
+                            <li>
+                              AWS
+                            </li>
+                            <li>
+                              Linux
+                            </li>
+                            
+                        </ul>
+                    </Description>
+                    <Description>
+                        {/* <strong>Tools</strong>
+                        <ul>
+                            <li>Docker</li>
+                            <li>Android Studio</li>
+                            <li>Visual Studio Code</li>
+                        </ul> */}
+                    </Description>
+                </Main>
+
                 <BigTitle text="SKILLS" top="80%" right="30%" />
             </Box>
         </ThemeProvider>

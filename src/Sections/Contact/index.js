@@ -3,7 +3,10 @@ import LinkedId from "../../assets/linkedin-brands.svg";
 import Twitter from "../../assets/twitter-square-brands.svg";
 import Instagram from "../../assets/instagram-square-brands.svg";
 import styled from "styled-components";
-import {Github} from "../../components/AllSvgs";
+import GitHub_M from "../../assets/GitHub-Mark.png";
+import Medium from "../../assets/Medium.png";
+
+import { Link } from "react-router-dom";
 
 const ContactSection = styled.section`
   width: 100vw;
@@ -34,10 +37,12 @@ const Title = styled.h1`
     border-bottom: 2px solid var(--pink);
   }
 `;
-
 const Icons = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 3rem;
+
   a {
     &:hover {
       img {
@@ -45,15 +50,22 @@ const Icons = styled.div`
           brightness(100%) contrast(97%);
       }
     }
-    &:not(:last-child) {
-      margin-right: 2rem;
-    }
+    margin-right: 2rem;
+    margin-bottom: 1rem;
     img {
       width: 3rem;
       height: 3rem;
     }
   }
+
+  @media only screen and (max-width: 40em) {
+    a {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
 `;
+
 
 const Form = styled.form`
   display: flex;
@@ -139,10 +151,10 @@ const Contact = () => {
           <img src={LinkedId} alt="LinkedId"/>
         </a>
         <a href="https://github.com/PramithaMJ">
-          <img src={LinkedId} alt="Github"/>
+          <img src={GitHub_M} alt="Github"/>
         </a>
         <a href="https://medium.com/@lpramithamj">
-          <img src={LinkedId} alt="Medium"/>
+          <img src={Medium} alt="Medium"/>
         </a>
         <a href="https://twitter.com/PramithaMJ">
           <img src={Twitter} alt="Twitter"/>

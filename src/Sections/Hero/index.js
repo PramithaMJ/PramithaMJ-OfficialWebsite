@@ -8,6 +8,7 @@ import whiteBlob from "../../assets/blob white.png";
 import arrow from "../../assets/Arrow Right.svg";
 import mypic from "../../assets/mypic.png";
 import pramithaCV from "../../assets/cv/Pramitha_CV.pdf";
+import ParticlesComponent from "../../subComponents/ParticleComponent";
 
 const move = keyframes`
 0% { transform: translateY(-5px)  }
@@ -203,6 +204,8 @@ const HeroSection = () => {
   };
 
   return (
+    <>
+    
     <HomeSection id="home">
       <Blobs>
         <PinkBlob>
@@ -222,6 +225,7 @@ const HeroSection = () => {
             <Circle/>
             <span>Computer Engineer</span>
           </Topic>
+          
           <Title>Unleashing the power of code to shape my life, one line at a time! 🚀✨</Title>
           <SubText>
             I'm a passionate computer engineer with a love for web development,
@@ -238,6 +242,7 @@ const HeroSection = () => {
 
       </MainContent>
     </HomeSection>
+    </>
   );
 };
 
