@@ -205,7 +205,7 @@ const HeroSection = () => {
 
   return (
     <>
-    
+   
     <HomeSection id="home">
       <Blobs>
         <PinkBlob>
