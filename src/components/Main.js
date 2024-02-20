@@ -141,7 +141,7 @@ const Main = () => {
     return (
         <>
             <Suspense fallback={null}>
-                <Header />
+                {/* <Header /> */}
                 <MainS />
                 <GlobalStyleM />
                 <ScrollToTop />

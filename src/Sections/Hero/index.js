@@ -7,6 +7,7 @@ import purpleBlob from "../../assets/blob purple.png";
 import whiteBlob from "../../assets/blob white.png";
 import arrow from "../../assets/Arrow Right.svg";
 import mypic from "../../assets/mypic.png";
+import pramithaCV from "../../assets/cv/Pramitha_CV.pdf";
 
 const move = keyframes`
 0% { transform: translateY(-5px)  }
@@ -191,6 +192,16 @@ const MobileImage = styled.img`
 `;
 
 const HeroSection = () => {
+
+   const handleDownloadCV = () => {
+    
+    const pdfPath = pramithaCV;
+    const link = document.createElement("a");
+    link.href = pdfPath;
+    link.download = "PramithaMJ_CV.pdf";
+    link.click();
+  };
+
   return (
     <HomeSection id="home">
       <Blobs>
@@ -217,7 +228,7 @@ const HeroSection = () => {
             and a strong desire to learn and grow. I'm always looking for new
             opportunities to expand my knowledge and skills.
           </SubText>
-          <CTA>
+          <CTA onClick={handleDownloadCV}>
             Download CV &nbsp;
             <img src={arrow} alt="cta" width="100" height="100"/>
           </CTA>
