@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa5ed584.css",
-    "main.js": "/static/js/main.0d07c65d.js",
+    "main.css": "/static/css/main.c6935906.css",
+    "main.js": "/static/js/main.ba4cc6b6.js",
     "static/js/53.5f094d31.chunk.js": "/static/js/53.5f094d31.chunk.js",
     "static/js/767.25d4f4e3.chunk.js": "/static/js/767.25d4f4e3.chunk.js",
     "static/js/163.95b91842.chunk.js": "/static/js/163.95b91842.chunk.js",
@@ -80,6 +80,7 @@
     "static/media/Design.svg": "/static/media/Design.ff903a950996991bf19b.svg",
     "static/media/human.svg": "/static/media/human.e976c9c403fcbf54f234366fbc99d9b1.svg",
     "static/media/Support.svg": "/static/media/Support.c20442deda3b566122ae.svg",
+    "static/media/java.svg": "/static/media/java.e762a078e3d03dbc7253140068f33ec7.svg",
     "static/media/gtihub.svg": "/static/media/gtihub.cbbdd0c902376ddb076c.svg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -106,15 +107,15 @@
     "static/media/facebook-square-brands.svg": "/static/media/facebook-square-brands.38c6b4e5a1568d1aa181dd4ff5b08e05.svg",
     "static/media/medium.svg": "/static/media/medium.bf8314fc18c89f4f0bfa.svg",
     "static/media/arrow-up.svg": "/static/media/arrow-up.65164624ca1539634ee30e63113402a1.svg",
-    "main.fa5ed584.css.map": "/static/css/main.fa5ed584.css.map",
-    "main.0d07c65d.js.map": "/static/js/main.0d07c65d.js.map",
+    "main.c6935906.css.map": "/static/css/main.c6935906.css.map",
+    "main.ba4cc6b6.js.map": "/static/js/main.ba4cc6b6.js.map",
     "53.5f094d31.chunk.js.map": "/static/js/53.5f094d31.chunk.js.map",
     "767.25d4f4e3.chunk.js.map": "/static/js/767.25d4f4e3.chunk.js.map",
     "163.95b91842.chunk.js.map": "/static/js/163.95b91842.chunk.js.map",
     "364.696dab42.chunk.js.map": "/static/js/364.696dab42.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa5ed584.css",
-    "static/js/main.0d07c65d.js"
+    "static/css/main.c6935906.css",
+    "static/js/main.ba4cc6b6.js"
   ]
 }
