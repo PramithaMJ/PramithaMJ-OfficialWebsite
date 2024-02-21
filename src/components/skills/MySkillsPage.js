@@ -8,6 +8,7 @@ import SocialIcons from '../../subComponents/SocialIcons';
 import PowerButton from '../../subComponents/PowerButton';
 import ParticleComponent from '../../subComponents/ParticleComponent';
 import BigTitle from '../../subComponents/BigTitlte';
+import Card2 from '../../pages/Card/card';
 
 const Box = styled.div`
   background-color: ${props => props.theme.body};
@@ -98,7 +99,7 @@ const MySkillsPage = () => {
                                 Web Development
                                 <ul>
                                     <li>Spring Framework</li>
-                                    <li>MERN Stack (MongoDB, Express.js, React.js, Node.js)</li>
+                                    <li>Express.js Node.js</li>
                                 </ul>
                             </li>
                             <li>
@@ -129,8 +130,8 @@ const MySkillsPage = () => {
                             <li>
                                 Web Development
                                 <ul>
-                                    <li>Next Js</li>
-                                    <li>React Js</li>
+                                    <li>Next.js,</li>
+                                    <li>React.js</li>
                                 </ul>
                             </li>
                             <li>
@@ -184,6 +185,7 @@ const MySkillsPage = () => {
 
                 <BigTitle text="SKILLS" top="80%" right="30%" />
             </Box>
+            <Card2 />
         </ThemeProvider>
     );
 };

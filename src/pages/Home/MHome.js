@@ -11,6 +11,7 @@ import Contact from "../../Sections/Contact";
 import BlogPage from "../../components/BlogPage";
 import LatestBlogs from "../LatestBlogs/LatestBlogs";
 import ParticlesComponent from "../../subComponents/ParticleComponent";
+import Card2 from "../Card/card";
 
 const Container = styled.div`
   display: flex;

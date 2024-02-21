@@ -5,7 +5,7 @@ import App from './App'
 import "normalize.css"
 import {createRoot} from 'react-dom/client';
 
-import {BrowserRouter} from 'react-router-dom'
+import {BrowserRouter, HashRouter} from 'react-router-dom'
 import {DevSupport} from "@react-buddy/ide-toolbox";
 import {ComponentPreviews, useInitial} from "./dev";
 
@@ -13,13 +13,13 @@ import {ComponentPreviews, useInitial} from "./dev";
 // From react 18 we should use createRoot instead of ReactDOM
 const container = document.getElementById('root');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
-root.render(<BrowserRouter>
+root.render(<HashRouter>
     <DevSupport ComponentPreviews={ComponentPreviews}
                 useInitialHook={useInitial}
     >
         <App/>
     </DevSupport>
-</BrowserRouter>);
+</HashRouter>);
 
 // ReactDOM.render(
 //   <React.StrictMode>
