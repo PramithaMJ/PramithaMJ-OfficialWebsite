@@ -1,6 +1,10 @@
 .content {
   padding: 9rem 9rem 3rem;
+  background-color: #000000;
+  position: relative;
+  z-index: 2; /* Ensure a higher z-index for the content */
 }
+
 
 .header {
   display: flex;
@@ -10,7 +14,7 @@
 
 .title {
   padding-top: 10px;
-  color: var(--txt);
+  color: #fff;
   font-size: 6rem;
   font-weight: 200;
 }
@@ -27,7 +31,7 @@
   }
 
   .hero-svg2 {
-    fill: #8a4ca8;
+    fill: #2f0b40;
   }
 }
 
@@ -68,4 +72,5 @@
   .title {
     font-size: 4rem;
   }
+
 }

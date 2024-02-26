@@ -6,6 +6,10 @@ import LinerProgress from '../../components/UIElements/LinerProgress/LinerProgre
 import Button from '../../components/UIElements/Button/Button';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import { LinearProgress } from '@mui/material';
+import { ThemeProvider } from 'styled-components';
+import { DarkTheme } from '../../components/Themes';
+import ParticlesComponent from '../../subComponents/ParticleComponent';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const resumeLink =
@@ -51,7 +55,11 @@ const Resume = () => {
   };
 
   return (
-    <div>
+    <ThemeProvider theme={DarkTheme}>
+      
+      
+ <div>
+  <ParticlesComponent />
       <div className={s.content}>
         <div className={s.header}>
           <h1 className={s.title}>
@@ -73,7 +81,7 @@ const Resume = () => {
         </Button>
         <div className={s.pdfWrapper} ref={pdfWrapper}>
           <Document
-            loading={<LinerProgress />}
+            loading={<LinearProgress />}
             file={{ url: resumeLink }}
             onLoadSuccess={onDocumentLoadSuccess}
           >
@@ -82,6 +90,8 @@ const Resume = () => {
         </div>
       </div>
     </div>
+    </ThemeProvider>
+   
   );
 };
 

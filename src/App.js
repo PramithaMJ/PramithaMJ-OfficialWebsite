@@ -51,8 +51,7 @@ function App() {
 
             <Route path="/Certificates" element={<Certificates/>} />
 
- <Route path="/resume" element={<Resume/>} />
-
+            <Route path="/resume" element={<Resume/>} />
 
             <Route path="/skills" element={<MySkillsPage />} />
             {/* Below is to catch all the other routes and send the user to main component,

@@ -17,6 +17,7 @@ import BlogPage from './BlogPage'
 import LatestBlogs from '../pages/LatestBlogs/LatestBlogs'
 import ParticlesComponent from '../subComponents/ParticleComponent'
 import HeroSection from '../Sections/Hero'
+import GithubActivity from '../Sections/GithubActivity/GithubActivity'
 const MHome = lazy(() => import("../pages/Home/MHome"));
 const Header = lazy(() => import("../sectionComponents/Header/HeaderM"));
 const Footer = lazy(() => import("../sectionComponents/Footer/Footer"));
@@ -169,7 +170,7 @@ const Main = () => {
           {/* <ParticlesComponent /> */}
             <Suspense fallback={null}>
                 {/* <Header /> */}
-                {/* <ParticlesComponent/> */}
+                <ParticlesComponent/>
                 
                 <MainS />
                 <GlobalStyleM />
@@ -177,6 +178,7 @@ const Main = () => {
                 <MHome />
                 
             <LatestBlogs />
+            <GithubActivity />
             <Contact2/>
                 <Footer />
             </Suspense>
