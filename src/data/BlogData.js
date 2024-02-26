@@ -37,10 +37,18 @@ export const Blogs = [
         id:5,
         name:"Microservices Unleashed: Elevating Software Development",
         tags:["Java","Spring","Microservices","Architecture","DesignPatterns"],
-        date:"11 December, 20223",
+        date:"11 December, 2023",
         imgSrc:"https://miro.medium.com/v2/resize:fit:1400/format:webp/1*sinHc_6xQk5NQXEIo49F2Q.jpeg",
         link:"https://medium.com/@lpramithamj/microservices-unleashed-elevating-software-development-ea1004e01949"
 
+    },
+     {
+        id:6,
+        name:"The Magic of Git & GitHub",
+        tags:["Git","GitHub","VersionControl","SoftwareDevelopment"],
+        date:"28 February, 2024",
+        imgSrc:"https://miro.medium.com/v2/resize:fit:1400/format:webp/0*BbGjKaBZDKqc0E-6.jpg",
+        link:"https://medium.com/@lpramithamj/the-magic-of-git-github-4d3e183a808d"
     },
   
 ] 

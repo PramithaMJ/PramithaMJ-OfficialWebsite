@@ -155,7 +155,7 @@ const About = () => {
         </div>
         <Content>
           <Rocket>
-            <img src={pmj} alt="" width="500" height="500" />
+            <img src={rocket} alt="" width="500" height="500" />
           </Rocket>
           <AboutText>
             <Human>
@@ -168,8 +168,6 @@ const About = () => {
               I am very interested in computer programming, web development, and software development.
               I have done several projects related to software development and web development.
               I do my best to honor their commitment. In addition, I want to develop a positive outlook on life and strive to be a respected member of the society.
-
-              Aspiring Computer Engineer with a specialized focus on Java and Spring technologies.
 
               I believe everything is an Art when you put your consciousness in it.
             </Text>

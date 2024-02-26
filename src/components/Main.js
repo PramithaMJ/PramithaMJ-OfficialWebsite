@@ -172,7 +172,7 @@ const Main = () => {
                 {/* <Header /> */}
                 <ParticlesComponent/>
                 
-                <MainS />
+                {/* <MainS /> */}
                 <GlobalStyleM />
                 <ScrollToTop />
                 <MHome />

@@ -6,9 +6,11 @@ import pinkBlob from "../../assets/blobPink.png";
 import purpleBlob from "../../assets/blob purple.png";
 import whiteBlob from "../../assets/blob white.png";
 import arrow from "../../assets/Arrow Right.svg";
-import mypic from "../../assets/mypic.png";
+import mypic from "../../assets/MyNew-removebg-preview.png";
 import pramithaCV from "../../assets/cv/Pramitha_CV.pdf";
 import ParticlesComponent from "../../subComponents/ParticleComponent";
+import SocialIcons from "../../subComponents/SocialIcons";
+import { dark } from "@mui/material/styles/createPalette";
 
 const move = keyframes`
 0% { transform: translateY(-5px)  }
@@ -144,7 +146,7 @@ const Title = styled.h1`
 
 const SubText = styled.h5`
   font-size: calc(0.5rem + 0.5vw);
-  color: var(--nav2);
+  color: var(--white);
 `;
 
 const CTA = styled.button`
@@ -207,6 +209,7 @@ const HeroSection = () => {
     <>
    
     <HomeSection id="home">
+      <SocialIcons theme={dark} />
       <Blobs>
         <PinkBlob>
           <img src={pinkBlob} alt="" width="400" height="400" />{" "}
@@ -226,12 +229,18 @@ const HeroSection = () => {
             <span>Computer Engineer</span>
           </Topic>
           
-          <Title>Unleashing the power of code to shape my life, one line at a time! 🚀✨</Title>
+          {/* <Title>Unleashing the power of code to shape my life, one line at a time! 🚀✨</Title> */}
+          <Title>Hi,I'm Pramitha</Title>
           <SubText>
             I'm a passionate computer engineer with a love for web development,
             and a strong desire to learn and grow. I'm always looking for new
             opportunities to expand my knowledge and skills.
           </SubText>
+          {/* <SubText>
+            I'm a passionate computer engineer with a love for web development,
+            and a strong desire to learn and grow. I'm always looking for new
+            opportunities to expand my knowledge and skills.
+          </SubText> */}
           <CTA onClick={handleDownloadCV}>
             Download CV &nbsp;
             <img src={arrow} alt="cta" width="100" height="100"/>
