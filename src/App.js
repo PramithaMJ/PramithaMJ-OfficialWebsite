@@ -16,6 +16,7 @@ import NavBar from "./components/NavBar/NavBar";
 import { ContactUs } from "./components/contact/contact";
 import MediaCard from "./pages/Certificates/Certificates";
 import Certificates from "./pages/CertificatesM/Certificates";
+import Resume from "./pages/Resume/resume";
 
 
 
@@ -50,7 +51,7 @@ function App() {
 
             <Route path="/Certificates" element={<Certificates/>} />
 
-
+ <Route path="/resume" element={<Resume/>} />
 
 
             <Route path="/skills" element={<MySkillsPage />} />

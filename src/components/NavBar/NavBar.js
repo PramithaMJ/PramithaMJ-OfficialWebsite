@@ -114,6 +114,17 @@ function NavBar() {
                 Contact Me
               </NavLink>
             </li>
+             <li className="nav-item">
+              <NavLink
+                exact
+                to="/resume"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Resume
+              </NavLink>
+            </li>
           
           </ul>
           <div className="nav-icon" onClick={handleClick}>
