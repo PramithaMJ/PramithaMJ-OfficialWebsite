@@ -120,8 +120,8 @@ export const Work = [
         image:Git,
         description:"Git MasterClass - Udemy",
         tags:["Git","GitHub","GitLab","Bitbucket"],
-        demo:"",
-        github:""
+        demo:"https://colonline.udemy.com/certificate/UC-0137c74a-d30e-4bc1-b40d-dbcfc717961a/",
+        github:"https://colonline.udemy.com/certificate/UC-0137c74a-d30e-4bc1-b40d-dbcfc717961a/"
         
     },
     {

@@ -10,9 +10,6 @@ import ParticlesComponent from '../../subComponents/ParticleComponent';
 import HaXtream from '../../assets/certificates/HaXtream.jpeg'
 
 
-
-
-
 const MainContainer = styled(motion.div)`
 background-image: url(${img});
 background-size: cover;
@@ -119,7 +116,7 @@ const MyVerticalTimeline = () => {
 
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2018 - present"
+                date="2023"
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 
               >
@@ -130,10 +127,23 @@ const MyVerticalTimeline = () => {
                  OUR Team Brainleft at the IEEE Xtreme 17.0 2023 competition secured the 3rd position at the University of Ruhuna and ranked 90th in the national standings for Sri Lanka.
                 </p>
               </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                date="2023"
+                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                
+              >
+                <h3 className="vertical-timeline-element-title">MoraXtreme</h3>
+                <br/>
+                <h4 className="vertical-timeline-element-subtitle">UOM, Sri Lanka</h4>
+                <p>
+                 OUR Team Brainleft participated in 12 hour hackathon organized by University of Moratuwa.
+                </p>
+              </VerticalTimelineElement>
 
                <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2018 - present"
+                date="2023"
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 
               >
@@ -147,7 +157,7 @@ const MyVerticalTimeline = () => {
 
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2018 - present"
+                date="2022"
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 
               >
