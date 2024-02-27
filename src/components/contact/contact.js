@@ -30,17 +30,17 @@ export const ContactUs = () => {
 
     emailjs
       .send(
-        contactConfig.YOUR_SERVICE_ID,
-        contactConfig.YOUR_TEMPLATE_ID,
+        "service_2r8hhy3",  
+        "template_l3isvki",
         templateParams,
-        contactConfig.YOUR_USER_ID
+        "1A5gSOFSBn3a5s5Z3" 
       )
       .then(
         (result) => {
           console.log(result.text);
           setFormdata({
             loading: false,
-            alertmessage: "SUCCESS! ,Thankyou for your messege",
+            alertmessage: "SUCCESS! ,Thank you for your message",
             variant: "success",
             show: true,
           });
@@ -48,7 +48,7 @@ export const ContactUs = () => {
         (error) => {
           console.log(error.text);
           setFormdata({
-            alertmessage: `Faild to send!,${error.text}`,
+            alertmessage: `Failed to send!, ${error.text}`,
             variant: "danger",
             show: true,
           });
@@ -64,7 +64,7 @@ export const ContactUs = () => {
     });
   };
 
-  return (
+    return (
     <HelmetProvider>
       <Container>
         <Helmet>
