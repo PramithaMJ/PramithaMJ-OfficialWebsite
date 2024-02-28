@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import Facebook from "../../assets/facebook-square-brands.svg";
 import LinkedId from "../../assets/linkedin-brands.svg";
 import Twitter from "../../assets/twitter-square-brands.svg";
@@ -5,8 +7,6 @@ import Instagram from "../../assets/instagram-square-brands.svg";
 import styled from "styled-components";
 import GitHub_M from "../../assets/GitHub-Mark.png";
 import Medium from "../../assets/Medium.png";
-
-import { Link } from "react-router-dom";
 
 const ContactSection = styled.section`
   width: 100vw;
@@ -137,12 +137,23 @@ const Row = styled.div`
     }
   }
 `;
+
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   return (
     <ContactSection id="contact">
       <Title>Get in touch</Title>
-      {/* <Text>Lorem ipsum dolor sit amet, consectetur adipisicing.</Text> */}
-      <Icons>
+       <Icons>
         <a href="https://www.facebook.com/pramitha.ayasooriya">
           {" "}
           <img src={Facebook} alt="Facebook"/>
@@ -165,24 +176,56 @@ const Contact = () => {
       </Icons>
       <Form>
         <Row>
-          <input name="name" type="text" placeholder="your name"/>
+          <input
+            name="name"
+            type="text"
+            placeholder="your name"
+            value={formData.name}
+            onChange={handleInputChange}
+          />
           <input
             name="email"
             type="email"
             placeholder="enter working email id"
+            value={formData.email}
+            onChange={handleInputChange}
           />
         </Row>
         <textarea
-          name=""
-          id=""
+          name="message"
           cols="30"
           rows="2"
           placeholder="your message"
+          value={formData.message}
+          onChange={handleInputChange}
         ></textarea>
         <div style={{ margin: "0 auto" }}>
           <button
             onClick={(e) => {
               e.preventDefault();
+
+              const templateParams = {
+                from_name: formData.name,
+                user_name: formData.name,
+                to_name: "your_email@example.com", // Replace with your email address
+                message: formData.message,
+              };
+
+              emailjs
+                .send(
+                  "service_2r8hhy3",
+                  "your_emailJS_template_ID",
+                  templateParams,
+                  "your_emailJS_user_ID"
+                )
+                .then(
+                  (response) => {
+                    console.log("Email sent successfully:", response);
+                  },
+                  (error) => {
+                    console.error("Email sending failed:", error);
+                  }
+                );
             }}
           >
             Submit
@@ -194,3 +237,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

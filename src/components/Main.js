@@ -18,6 +18,8 @@ import LatestBlogs from '../pages/LatestBlogs/LatestBlogs'
 import ParticlesComponent from '../subComponents/ParticleComponent'
 import HeroSection from '../Sections/Hero'
 import GithubActivity from '../Sections/GithubActivity/GithubActivity'
+import MySkillsPage from './skills/MySkillsPage'
+import SkillCard2 from '../pages/Card/card'
 const MHome = lazy(() => import("../pages/Home/MHome"));
 const Header = lazy(() => import("../sectionComponents/Header/HeaderM"));
 const Footer = lazy(() => import("../sectionComponents/Footer/Footer"));
@@ -170,12 +172,13 @@ const Main = () => {
           {/* <ParticlesComponent /> */}
             <Suspense fallback={null}>
                 {/* <Header /> */}
-                <ParticlesComponent/>
+                {/* <ParticlesComponent/> */}
                 
                 {/* <MainS /> */}
                 <GlobalStyleM />
                 <ScrollToTop />
                 <MHome />
+                 <MySkillsPage/>
                 
             <LatestBlogs />
             <GithubActivity />

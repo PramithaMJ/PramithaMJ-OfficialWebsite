@@ -181,7 +181,7 @@ const MobileImage = styled.img`
   width: calc(30% + 20vw);
   height: auto;
   z-index: 7;
-  animation: ${move} 2.5s ease infinite;
+  // animation: ${move} 2.5s ease infinite;
   @media only Screen and (max-width: 48em) {
     align-self: flex-start;
     position: absolute;

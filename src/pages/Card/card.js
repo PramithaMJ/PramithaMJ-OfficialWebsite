@@ -1,24 +1,34 @@
-// Card2.js
 import React from 'react';
-import './Card.css';
-import cardData from '../../data/CardsData'; // Import the card data
+import './Card.css'; 
+import cardData from '../../data/CardsData';
+import { Tilt } from 'react-tilt';
 
-const Card2 = () => {
+const SkillCard2 = () => {
   return (
-    <div>
-      {cardData.map((card) => (
-        <div key={card.id} className="card">
-          <img src={card.image.url} alt={card.name} />
-          <div className="card__content">
-            <p className="card__title">{card.name}</p>
-            <p className="card__description">{card.description}</p>
-          </div>
+    <div className='transparent'>
+      <br />
+      <br />
+      <div className="container">
+        <div className="grid-container">
+          {cardData.map((card) => (
+            <Tilt key={card.id}>
+              <div className="card">
+                <div className="card__title">{card.title}</div>
+                <div className="card__content">
+                  <p className="card__name">{card.name}</p>
+                  <ul className="card__description">
+                    {card.description.map((point, index) => (
+                      <li key={index}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </Tilt>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };
 
-// Rest of the Card2 component and styling...
-
-export default Card2;
+export default SkillCard2;

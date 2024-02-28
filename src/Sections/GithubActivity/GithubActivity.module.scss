@@ -3,7 +3,20 @@
   justify-content: center;
 }
 
-.title{
-  margin: 25;
-  padding: 25;
+.title {
+  margin: 25px; /* Adding 'px' unit */
+  padding: 25px; /* Adding 'px' unit */
+}
+
+@media (max-width: 600px) {
+  /* Adjust styles for smaller screens (you can change the '600px' to your desired breakpoint) */
+  .container {
+    flex-direction: column; /* Display items in a column on smaller screens */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .title {
+    margin: 15px; /* Adjust margin for smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
 }

@@ -55,6 +55,7 @@ const Main = styled.div`
 const Title = styled.h1`
   font-size: 2rem;
   display: inline-block;
+  color: var(--nav2);
 `;
 
 const CurvedLine = styled.div`

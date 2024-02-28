@@ -5,6 +5,8 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
+import Particles from "react-tsparticles";
+import ParticlesComponent from "../../subComponents/ParticleComponent";
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
@@ -66,6 +68,7 @@ export const ContactUs = () => {
 
     return (
     <HelmetProvider>
+   {formData.loading && <ParticlesComponent />}
       <Container>
         <Helmet>
           <meta charSet="utf-8" />
@@ -161,7 +164,7 @@ export const ContactUs = () => {
           </Col>
         </Row>
       </Container>
-      <div className={formData.loading ? "loading-bar" : "d-none"}></div>
+       <div className={formData.loading ? "loading-bar" : "d-none"}></div>
     </HelmetProvider>
   );
 };
