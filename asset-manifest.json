@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e9c31201.css",
-    "main.js": "/static/js/main.75ab4e33.js",
+    "main.css": "/static/css/main.93acaa11.css",
+    "main.js": "/static/js/main.6d670e1c.js",
     "static/js/53.014c5af3.chunk.js": "/static/js/53.014c5af3.chunk.js",
     "static/js/767.f2908b20.chunk.js": "/static/js/767.f2908b20.chunk.js",
     "static/js/163.739cb415.chunk.js": "/static/js/163.739cb415.chunk.js",
@@ -33,17 +33,18 @@
     "static/media/Bg.png": "/static/media/Bg.c2ca6719cb61fd761ac6.png",
     "static/media/hand.svg": "/static/media/hand.86c7a6f7169a202ec32a6cf631f11ec3.svg",
     "static/media/CloudBatch.png": "/static/media/CloudBatch.dffd7e53797662a82c32.png",
+    "static/media/Pramitha_CV.pdf": "/static/media/Pramitha_CV.1da0906f32c5f2752360.pdf",
     "static/media/Ga.png": "/static/media/Ga.1d2a9805136075384e1d.png",
     "static/media/SoftSkills.jpeg": "/static/media/SoftSkills.035658b991520e27e194.jpeg",
     "static/media/Sk2.jpg": "/static/media/Sk2.5147f4024139937ff9c1.jpg",
     "static/media/JavaHacker.jpg": "/static/media/JavaHacker.e3c34354e5032ae9f21e.jpg",
     "static/media/C.jpg": "/static/media/C.fbf85a1d677db03f2bf0.jpg",
-    "static/media/Pramitha_CV.pdf": "/static/media/Pramitha_CV.b24fa25a5eb5ebd6e654.pdf",
     "static/media/mypic2.png": "/static/media/mypic2.fb90f93e4d4dfd7221d9.png",
     "static/media/Trainning.jpeg": "/static/media/Trainning.0be595578b10f5311d9b.jpeg",
     "static/media/pmj.png": "/static/media/pmj.a6c6e4e29f294af095de.png",
     "static/media/SM.png": "/static/media/SM.1fc630dc302bd35d4fc0.png",
     "static/media/MyNew-removebg-preview.png": "/static/media/MyNew-removebg-preview.ef6bca9e7fb89909eeed.png",
+    "static/media/Git.png": "/static/media/Git.09c8f7bac733cf9cdc38.png",
     "static/media/MyNew_bg.png": "/static/media/MyNew_bg.c723ce30c69e1a5e25e1.png",
     "static/media/javaSliit2.jpg": "/static/media/javaSliit2.021f55818210d65fa9e8.jpg",
     "static/media/Design_Patterns.jpg": "/static/media/Design_Patterns.ebd42ab8ddcb48867ae8.jpg",
@@ -73,7 +74,6 @@
     "static/media/Medium.png": "/static/media/Medium.59472279d824e65215cc.png",
     "static/media/3dcapsule.png": "/static/media/3dcapsule.b06cad0fcb2660765ed1.png",
     "static/media/home-bg.jpg": "/static/media/home-bg.43a5db932e4ce89869ea.jpg",
-    "static/media/Git.png": "/static/media/Git.da22d5fd29146bf100b3.png",
     "static/media/about-promo.svg": "/static/media/about-promo.ab26dcb9a0b856241c00.svg",
     "static/media/profile-img.png": "/static/media/profile-img.5179e446ac1a570ce69b.png",
     "static/media/Develope.svg": "/static/media/Develope.48a8617e6ae6d433ad24.svg",
@@ -86,7 +86,7 @@
     "static/media/human.svg": "/static/media/human.e976c9c403fcbf54f234366fbc99d9b1.svg",
     "static/media/Support.svg": "/static/media/Support.c20442deda3b566122ae.svg",
     "static/media/resume-files.svg": "/static/media/resume-files.9fb2ccdea7801292fa211d00d96899bd.svg",
-    "static/media/java.svg": "/static/media/java.e762a078e3d03dbc7253140068f33ec7.svg",
+    "static/media/java.svg": "/static/media/java.e762a078e3d03dbc7253.svg",
     "static/media/gtihub.svg": "/static/media/gtihub.cbbdd0c902376ddb076c.svg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -118,15 +118,15 @@
     "static/media/download.svg": "/static/media/download.2839570d64ef082399e6728abd0e447f.svg",
     "static/media/modal-close.svg": "/static/media/modal-close.629ae571745a2968ab85.svg",
     "static/media/toggle-light.svg": "/static/media/toggle-light.28152a5f3e52dffa9460.svg",
-    "main.e9c31201.css.map": "/static/css/main.e9c31201.css.map",
-    "main.75ab4e33.js.map": "/static/js/main.75ab4e33.js.map",
+    "main.93acaa11.css.map": "/static/css/main.93acaa11.css.map",
+    "main.6d670e1c.js.map": "/static/js/main.6d670e1c.js.map",
     "53.014c5af3.chunk.js.map": "/static/js/53.014c5af3.chunk.js.map",
     "767.f2908b20.chunk.js.map": "/static/js/767.f2908b20.chunk.js.map",
     "163.739cb415.chunk.js.map": "/static/js/163.739cb415.chunk.js.map",
     "364.c9eb10e3.chunk.js.map": "/static/js/364.c9eb10e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9c31201.css",
-    "static/js/main.75ab4e33.js"
+    "static/css/main.93acaa11.css",
+    "static/js/main.6d670e1c.js"
   ]
 }
