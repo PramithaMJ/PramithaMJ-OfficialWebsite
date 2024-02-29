@@ -46,7 +46,7 @@ const Title = styled.h1`
   display: inline-block;
   font-size: 2rem;
   /* margin-top: 4rem; */
-  margin-top: 1rem;
+  margin-top: -4rem;
   position: relative;
   &::before {
     content: "";
@@ -62,9 +62,9 @@ const Title = styled.h1`
 `;
 
 const Line = styled.span`
-  border-left: 4px solid var(--background);
+  border-left: 4px solid var(--white);
   height: 15rem;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   border-radius: 20px 20px 0 0;
 `;
 
@@ -73,10 +73,11 @@ const Triangle = styled.span`
   height: 0;
   border-left: 1.2rem solid transparent;
   border-right: 1.2rem solid transparent;
-  border-top: 2rem solid var(--background);
+  border-top: 2rem solid var(--white);
 `;
 
 const Content = styled.div`
+color: var(--white);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -322,7 +323,7 @@ const Services = () => {
   return (
     <ServiceSection id="services">
       <Background ref={ref}>
-        <Title className="title">Projects</Title>
+        <Title className="title">Recent Projects</Title>
         <Line id="line" />
         <Triangle id="triangle" />
       </Background>
@@ -359,7 +360,7 @@ const Services = () => {
         </OBJ>
         <SvgBlock svg="Develope.svg" />
       </Content>
-      <Content>
+      <Content  ref={addToRefs}>
         <TextBlock
           topic="Web Application"
           title={<h1>Personal Finance Tracker.</h1>}

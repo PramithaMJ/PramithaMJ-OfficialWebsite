@@ -6,8 +6,6 @@ import { Tilt } from 'react-tilt';
 const SkillCard2 = () => {
   return (
     <div className='transparent'>
-      <br />
-      <br />
       <div className="container">
         <div className="grid-container">
           {cardData.map((card) => (

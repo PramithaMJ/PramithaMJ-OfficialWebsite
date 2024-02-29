@@ -19,6 +19,7 @@ const AboutSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--white);
 `;
 const Waves = styled.img`
   width: 100%;
@@ -55,7 +56,7 @@ const Main = styled.div`
 const Title = styled.h1`
   font-size: 2rem;
   display: inline-block;
-  color: var(--nav2);
+  color: var(--black);
 `;
 
 const CurvedLine = styled.div`
@@ -101,7 +102,7 @@ const Human = styled.div`
 const Text = styled.h4`
   font-size: calc(0.5rem + 1vw);
   line-height: 1.5;
-  color: var(--nav2);
+  color: var(--black);
 `;
 const Circle = styled.span`
   display: inline-block;

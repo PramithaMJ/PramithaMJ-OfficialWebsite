@@ -7,7 +7,7 @@ import img from "../../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
 import ParticlesComponent from '../../subComponents/ParticleComponent';
 
 const MainContainer = styled(motion.div)`
-background-image: url(${img});
+background-color: ${props => `rgba(${props.theme.bodyRgba},1)`};
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -26,7 +26,7 @@ const Center = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-padding-top: 10rem;
+padding-top: 5rem;
 `
 
 const Grid = styled.div`
@@ -47,12 +47,29 @@ const container = {
       }
     }
   }
-
+const Title = styled.h1`
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    &::before {
+      content: '';
+      height: 1px;
+      width: 50%;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 0.5rem);
+      border-bottom: 2px solid var(--pink);
+    }
+  `;
 
 const MyVerticalTimeline = () => {
   return (
     <>
-      <ThemeProvider theme={DarkTheme}>    
+     
+      <ThemeProvider theme={DarkTheme}>  
+     
         <MainContainer
           variants={container}
           initial='hidden'
@@ -61,6 +78,9 @@ const MyVerticalTimeline = () => {
               opacity:0, transition:{duration: 0.5}
           }}
         > 
+         <Center>
+            <Title>Exposing My Odyssey throught Competitive Ventures...</Title>
+            </Center>  
           <Container>
             <VerticalTimeline>
               <ParticlesComponent theme="light" />

@@ -7,8 +7,11 @@ import Instagram from "../../assets/instagram-square-brands.svg";
 import styled from "styled-components";
 import GitHub_M from "../../assets/GitHub-Mark.png";
 import Medium from "../../assets/Medium.png";
+import { contactConfig } from "../../content_option";
+import './contact.css'; 
 
 const ContactSection = styled.section`
+position: relative;
   width: 100vw;
   padding: calc(2.5rem + 2.5vw) 0;
   background-color: #0a0b10;
@@ -75,14 +78,15 @@ const Form = styled.form`
     padding: 1rem calc(0.5rem + 1vw);
     margin-bottom: 1rem;
     background-color: var(--nav2);
-    border: none;
+   border: 2px solid var(--nav2);
     border-radius: 4px;
     color: #eff7f8;
     &:active,
     &:focus {
-      border: none;
+      border: 2px solid var(--nav2);
       outline: none;
       background-color: var(--nav);
+       border-color: var(--white);
     }
     &::placeholder {
       color: #eff7f8;
@@ -96,13 +100,16 @@ const Form = styled.form`
     padding: 1rem calc(0.5rem + 1vw);
     margin-bottom: 1rem;
     background-color: var(--nav2);
-    border: none;
+    border: 2px solid var(--nav2);
     border-radius: 4px;
     color: #eff7f8;
     margin-bottom: 2rem;
+    width: 100%;
+    height: 10rem;
     &:focus,
     &:active {
       background-color: var(--nav);
+      border-color: var(--white);
     }
     &::placeholder {
       color: #eff7f8;
@@ -118,7 +125,7 @@ const Form = styled.form`
     cursor: pointer;
     transition: transform 0.3s;
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.3);
     }
     &:active {
       transform: scale(0.9);
@@ -137,7 +144,6 @@ const Row = styled.div`
     }
   }
 `;
-
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -207,23 +213,23 @@ const Contact = () => {
               const templateParams = {
                 from_name: formData.name,
                 user_name: formData.name,
-                to_name: "your_email@example.com", // Replace with your email address
+                to_name: contactConfig.YOUR_EMAIL,
                 message: formData.message,
               };
-
+              
               emailjs
                 .send(
                   "service_2r8hhy3",
-                  "your_emailJS_template_ID",
+                  "template_l3isvki",
                   templateParams,
-                  "your_emailJS_user_ID"
+                  "1A5gSOFSBn3a5s5Z3"
                 )
                 .then(
                   (response) => {
-                    console.log("Email sent successfully:", response);
+                    alert("Email sent successfully:", response);
                   },
                   (error) => {
-                    console.error("Email sending failed:", error);
+                    alert("Email sending failed:", error);
                   }
                 );
             }}

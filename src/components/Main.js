@@ -8,7 +8,7 @@ import SocialIcons from '../subComponents/SocialIcons'
 import { YinYang } from './AllSvgs'
 import Intro from './Intro'
 import Contact2 from "../Sections/Contact/index";
-
+import MyVerticalTimeline from '../pages/Achievments/Achievments'
 
 
 import {GlobalStyleM} from "../globalStylesM";
@@ -179,7 +179,7 @@ const Main = () => {
                 <ScrollToTop />
                 <MHome />
                  <MySkillsPage/>
-                
+                <MyVerticalTimeline />
             <LatestBlogs />
             <GithubActivity />
             <Contact2/>
