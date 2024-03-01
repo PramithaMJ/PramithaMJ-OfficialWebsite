@@ -20,6 +20,7 @@ import HeroSection from '../Sections/Hero'
 import GithubActivity from '../Sections/GithubActivity/GithubActivity'
 import MySkillsPage from './skills/MySkillsPage'
 import SkillCard2 from '../pages/Card/card'
+import Testimonials from '../Sections/Testimonials'
 const MHome = lazy(() => import("../pages/Home/MHome"));
 const Header = lazy(() => import("../sectionComponents/Header/HeaderM"));
 const Footer = lazy(() => import("../sectionComponents/Footer/Footer"));
@@ -180,6 +181,7 @@ const Main = () => {
                 <MHome />
                  <MySkillsPage/>
                 <MyVerticalTimeline />
+                <Testimonials />
             <LatestBlogs />
             <GithubActivity />
             <Contact2/>

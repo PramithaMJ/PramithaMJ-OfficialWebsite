@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const CARD = styled.div`
-  height: calc(8rem + 12vw);
-  width: calc(9rem + 12vw);
-  background-color: var(--nav2);
+  height: calc(12rem + 32vw);
+  width: calc(20rem + 24vw);
+  background-color: #06011a;
   border-radius: 20px;
   position: relative;
   margin-top: calc(5rem + 5vw);
@@ -14,8 +14,8 @@ const CARD = styled.div`
 `;
 
 const Image = styled.div`
-  width: 40%;
-  height: 40%;
+  width: 20%;
+  height: 20%;
   position: absolute;
   left: 50%;
   bottom: 80%;
@@ -29,9 +29,9 @@ const Image = styled.div`
   filter: drop-shadow(0px -3px 3px var(--nav2));
 `;
 
-const TEXT = styled.h4`
+const TEXT = styled.p`
   color: var(--white);
-  padding: 0 calc(1rem + 1vw);
+  padding: 0 calc(1rem + 2vw);
 
   text-align: center;
   font-size: calc(0.6rem + 0.5vw);
