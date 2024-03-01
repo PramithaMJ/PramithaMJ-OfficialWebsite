@@ -47,6 +47,7 @@ const Card = ({ name, text, image }) => {
   const Avatar = require(`../../assets/${image}.jpg`);
 
   return (
+    
     <CARD>
       <Image img={Avatar} width="400" height="400" />
       <TEXT>{text}</TEXT>

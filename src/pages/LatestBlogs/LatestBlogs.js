@@ -8,7 +8,6 @@ import ParticleComponent from '../../subComponents/ParticleComponent';
 import { DarkTheme } from '../../components/Themes';
 
 const MainContainer = styled(motion.div)`
-  background-image: url(${img});
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

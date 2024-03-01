@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+import { Tilt } from "react-tilt";
 
 const Card = lazy(() => import("../../sectionComponents/Card/Card"));
 
@@ -70,7 +71,6 @@ const Testimonials = () => {
   const settings = {
     dots: true,
     infinite: true,
-
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -81,6 +81,7 @@ const Testimonials = () => {
       <Title>Few good words about me!</Title>
       <Carousal>
         <Slider {...settings}>
+          <Tilt>
           <Card
             text="I had the pleasure of being Pramitha Jaysooriya's lecturer of University of Ruhuna,
              where I witnessed firsthand their exceptional dedication and aptitude for programming. 
@@ -98,7 +99,7 @@ const Testimonials = () => {
             name="Dr.Prabath Weerasinghe (Ph.D)"
             image="avatar-1"
           />
-
+</Tilt>
          
         </Slider>
       </Carousal>
