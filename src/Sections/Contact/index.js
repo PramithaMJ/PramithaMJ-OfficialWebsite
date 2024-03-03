@@ -11,10 +11,10 @@ import { contactConfig } from "../../content_option";
 import './contact.css'; 
 
 const ContactSection = styled.section`
+background-color: transparent;
 position: relative;
   width: 100vw;
   padding: calc(2.5rem + 2.5vw) 0;
-  background-color: #0a0b10;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */

@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { DarkTheme, lightTheme } from "../../components/Themes";
 import { motion } from "framer-motion";
+
 import LogoComponent from "../../subComponents/LogoComponent";
 import SocialIcons from "../../subComponents/SocialIcons";
-import { Work } from "../../data/CertificateData";
+
+import { Work } from "../../data/WorkData";
 import Card from "../../subComponents/Card";
 import { YinYang } from "../../components/AllSvgs";
 import BigTitle from "../../subComponents/BigTitlte";
@@ -24,9 +26,21 @@ const Main = styled(motion.ul)`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center content horizontally */
+  justify-content: center;
   gap: 5rem;
+  overflow: hidden; /* Hide the overflow to remove allocated space for remaining cards */
+
+  /* Adjust height for small screens */
+  height: ${(props) => (props.isSmallScreen ? "auto" : "calc(6 * (300px + 5rem))")};
+
+  /* Additional styles for large screens */
+  @media (min-width: 769px) {
+    flex-direction: column; /* Display cards in a column on large screens */
+    align-items: center;
+  }
 `;
+
+
 
 const Rotate = styled.span`
   display: block;
@@ -50,7 +64,7 @@ const container = {
   },
 };
 
-const Certificates = () => {
+const HomeProject = () => {
   const ref = useRef(null);
   const yinyang = useRef(null);
   const [isSmallScreen, setIsSmallScreen] = useState(
@@ -89,8 +103,8 @@ const Certificates = () => {
     };
   }, [isSmallScreen]);
 
-  const firstThreeCards = Work.slice(0,0);
-  const remainingCards = Work.slice(0);
+  const firstThreeCards = Work.slice(0,6);
+  const remainingCards = Work.slice();
 
   return (
     <ThemeProvider theme={isSmallScreen ? DarkTheme : DarkTheme}>
@@ -111,19 +125,12 @@ const Certificates = () => {
             <Card key={d.id} data={d} />
           ))}
         </Main>
-        <Main
-        variants={container}
-        animate="show"
-        initial = "hidden"
-        >
-          {remainingCards.map((d) => (
-            <Card key={d.id} data={d} />
-          ))}
-        </Main>
+
+  
         <Rotate ref={yinyang}>
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
-        <BigTitle text="CERTIFICATES" top="10%" right="20%" />
+       
       </Box>
       <Box>
         <Footer />
@@ -133,4 +140,4 @@ const Certificates = () => {
   );
 };
 
-export default Certificates;
+export default HomeProject;

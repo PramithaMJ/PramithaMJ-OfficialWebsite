@@ -27,6 +27,11 @@ const Image = styled.div`
   background-size: cover;
   background-position: top;
   filter: drop-shadow(0px -3px 3px var(--nav2));
+   @media (max-width: 768px) {
+    bottom: 90%;
+    width: 20%;
+    height: 20%;
+
 `;
 
 const TEXT = styled.p`

@@ -6,6 +6,7 @@ import { Blogs } from '../../data/BlogData';
 import BlogComponent from './LatestBlogComponents';
 import ParticleComponent from '../../subComponents/ParticleComponent';
 import { DarkTheme } from '../../components/Themes';
+import { Tilt } from 'react-tilt';
 
 const MainContainer = styled(motion.div)`
   background-size: cover;
@@ -15,7 +16,7 @@ const MainContainer = styled(motion.div)`
 `;
 
 const Container = styled.div`
-  background-color: ${(props) => `rgba(${props.theme.bodyRgba},1)`};
+  background-color: transparent;
   width: 100%;
   height: auto;
   position: relative;
@@ -59,12 +60,24 @@ const BlogContainer = styled.div`
 `;
 
 const ScrollButton = styled.button`
-  background-color: ${(props) => `rgba(${props.theme.bodyRgba},1)`};
-  color: var(--white);
+  background-color: white;
+  color: black;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
   font-size: 1rem;
+   border: 1px solid black;
+   padding: 1rem;  // Increase padding to make the button larger
+  font-size: 1rem;  // Increase font size for a larger button
+  border-radius: 50%;  // Make the button round  
+  &:hover {
+    background-color: black;  
+    color: white;            
+    border: 1px solid white;  
+    cursor: pointer;
+    scale: 1.1;
+
+  }
 `;
 
 const container = {
@@ -121,16 +134,24 @@ const LatestBlogs = () => {
         <Container>
         
           <Center>
+            <Tilt>
             <Title>Latest Blogs...</Title>
+            </Tilt>
             
             <BlogContainer id='blog-container'>
               {Blogs.map((blog) => (
+                <Tilt>
                 <BlogComponent key={blog.id} blog={blog} />
+                </Tilt>
               ))}
             </BlogContainer>
+          
             <div>
+              <Tilt>
               <ScrollButton onClick={() => scrollBlogs('left')}>{'<'}</ScrollButton>
+              <span> </span>
               <ScrollButton onClick={() => scrollBlogs('right')}>{'>'}</ScrollButton>
+              </Tilt>
             </div>
           </Center>
         </Container>

@@ -10,7 +10,7 @@ const ContactSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #ffffff; /* Text color for the title */
+  color: #ffffff;
 `;
 
 const GithubActivity = () => {

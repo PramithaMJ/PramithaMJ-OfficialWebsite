@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import styled from 'styled-components';
 import { Github } from '../components/AllSvgs';
+import { Tilt } from 'react-tilt';
 
 
 const Box = styled(motion.li)`
@@ -112,6 +113,7 @@ const Card = (props) => {
     const { id, name, image, description, tags, demo, github } = props.data;
 
     return (
+      <Tilt>
         <Box
             key={id}
             variants={{
@@ -132,11 +134,10 @@ const Card = (props) => {
                 <Link href={demo} target="_blank">
                     Visit
                 </Link>
-                <Git href={github} target="_blank">
-                    <Github width={30} height={30} />
-                </Git>
+               
             </Footer>
         </Box>
+        </Tilt>
     );
 };
 

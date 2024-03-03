@@ -26,7 +26,7 @@ import ParticlesComponent from '../../subComponents/ParticleComponent';
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
-  background-color: ${(props) => `rgba(${props.theme.bodyRgba},1)`};
+      background-color: transparent;
 `;
 
 const MySkillsPage = () => {

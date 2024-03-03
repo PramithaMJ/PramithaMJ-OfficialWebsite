@@ -11,6 +11,7 @@ import pramithaCV from "../../assets/cv/Pramitha_CV.pdf";
 import ParticlesComponent from "../../subComponents/ParticleComponent";
 import SocialIcons from "../../subComponents/SocialIcons";
 import { dark } from "@mui/material/styles/createPalette";
+import { Tilt } from "react-tilt";
 
 const move = keyframes`
 0% { transform: translateY(-5px)  }
@@ -241,10 +242,12 @@ const HeroSection = () => {
             and a strong desire to learn and grow. I'm always looking for new
             opportunities to expand my knowledge and skills.
           </SubText> */}
+          <Tilt>
           <CTA onClick={handleDownloadCV}>
             Download CV &nbsp;
             <img src={arrow} alt="cta" width="100" height="100"/>
           </CTA>
+          </Tilt>
         </Lb>
 
         <MobileImage src={mypic} alt="Pramitha" />

@@ -43,6 +43,7 @@ const cardData = [
       "PostgreSQL",
       "MongoDB",
       "Redis",
+      "Firebase"
     ],
   },
   {
@@ -53,6 +54,20 @@ const cardData = [
       "Linux",
       "Docker",
       "Kubernetes",
+    ],
+  },
+  {
+    id: 6,
+    name: "Others",
+    title: "Others",
+    description: [
+      "Git",
+      "Github",
+      "Jira",
+      "AWS",
+      "RabbitMQ",
+      "Machine Learning",
+
     ],
   },
 ];

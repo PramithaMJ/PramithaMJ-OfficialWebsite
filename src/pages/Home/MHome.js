@@ -13,6 +13,8 @@ import LatestBlogs from "../LatestBlogs/LatestBlogs";
 import ParticlesComponent from "../../subComponents/ParticleComponent";
 import Card2 from "../Card/card";
 import Main from "../../components/MainS";
+import WorkPage from "../../components/WorkPage";
+import HomeProject from "../HomeProject/HomeProject";
 
 const Container = styled.div`
   display: flex;
@@ -51,6 +53,8 @@ const MHome = () => {
             <HeroSection />
             <About />
             <Services />
+            {/* <HomeProject /> */}
+            
             {/* <Testimonials /> */}
             {/* <Title>Latest Blogs...</Title> */}
             {/* <LatestBlogs /> */}

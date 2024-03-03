@@ -7,14 +7,14 @@ import img from "../../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
 import ParticlesComponent from '../../subComponents/ParticleComponent';
 
 const MainContainer = styled(motion.div)`
-background-color: ${props => `rgba(${props.theme.bodyRgba},1)`};
+background-image: transparent;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-position: center;
 `
 const Container = styled.div`
-background-color: ${props => `rgba(${props.theme.bodyRgba},1)`};
+background-image: transparent;
 width: 100%;
 height:auto;
 
