@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.93acaa11.css",
-    "main.js": "/static/js/main.c6d44bc1.js",
+    "main.css": "/static/css/main.6f1022b0.css",
+    "main.js": "/static/js/main.9878b668.js",
     "static/js/53.014c5af3.chunk.js": "/static/js/53.014c5af3.chunk.js",
     "static/js/767.f2908b20.chunk.js": "/static/js/767.f2908b20.chunk.js",
-    "static/js/163.7dea96b2.chunk.js": "/static/js/163.7dea96b2.chunk.js",
+    "static/js/163.fc15150a.chunk.js": "/static/js/163.fc15150a.chunk.js",
     "static/js/364.c9eb10e3.chunk.js": "/static/js/364.c9eb10e3.chunk.js",
     "static/media/u-said-it-v13-1167(high bitrate).mp3": "/static/media/u-said-it-v13-1167(high bitrate).949cee7ea4a6ad9499db.mp3",
     "static/media/Ar.png": "/static/media/Ar.f72d40df3f96d580998b.png",
@@ -118,15 +118,15 @@
     "static/media/download.svg": "/static/media/download.2839570d64ef082399e6728abd0e447f.svg",
     "static/media/modal-close.svg": "/static/media/modal-close.629ae571745a2968ab85.svg",
     "static/media/toggle-light.svg": "/static/media/toggle-light.28152a5f3e52dffa9460.svg",
-    "main.93acaa11.css.map": "/static/css/main.93acaa11.css.map",
-    "main.c6d44bc1.js.map": "/static/js/main.c6d44bc1.js.map",
+    "main.6f1022b0.css.map": "/static/css/main.6f1022b0.css.map",
+    "main.9878b668.js.map": "/static/js/main.9878b668.js.map",
     "53.014c5af3.chunk.js.map": "/static/js/53.014c5af3.chunk.js.map",
     "767.f2908b20.chunk.js.map": "/static/js/767.f2908b20.chunk.js.map",
-    "163.7dea96b2.chunk.js.map": "/static/js/163.7dea96b2.chunk.js.map",
+    "163.fc15150a.chunk.js.map": "/static/js/163.fc15150a.chunk.js.map",
     "364.c9eb10e3.chunk.js.map": "/static/js/364.c9eb10e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93acaa11.css",
-    "static/js/main.c6d44bc1.js"
+    "static/css/main.6f1022b0.css",
+    "static/js/main.9878b668.js"
   ]
 }
