@@ -48,7 +48,7 @@ const GithubActivity = () => {
           blockMargin={5}
           theme={colorTheme}
           fontSize={16}
-          accessToken="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"
+          
           showTotalCount={true}
         />
       </div>
