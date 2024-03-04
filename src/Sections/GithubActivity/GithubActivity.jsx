@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import GitHubCalendar from 'react-github-calendar';
-import s from './GithubActivity.module.scss';
+import styled from "styled-components";
+import GitHubCalendar from "react-github-calendar";
+import s from "./GithubActivity.module.scss";
 
 const ContactSection = styled.section`
   width: 100vw;
@@ -20,7 +20,7 @@ const GithubActivity = () => {
     margin-bottom: 3rem;
     position: relative;
     &::before {
-      content: '';
+      content: "";
       height: 1px;
       width: 50%;
       position: absolute;
@@ -32,10 +32,10 @@ const GithubActivity = () => {
   `;
 
   const colorTheme = {
-    background: 'transparent',
-    level0: '#ecd9fc',
-    light: ['rgba(255, 255, 255, 0)', '#28a745'],
-    dark: ['rgba(0, 0, 0, 0)', '#28a745', '#196127', '#36d742', '#66ff66'],
+    background: "transparent",
+    level0: "#ecd9fc",
+    light: ["rgba(255, 255, 255, 0)", "#28a745"],
+    dark: ["rgba(0, 0, 0, 0)", "#28a745", "#196127", "#36d742", "#66ff66"],
   };
 
   return (
@@ -48,7 +48,6 @@ const GithubActivity = () => {
           blockMargin={5}
           theme={colorTheme}
           fontSize={16}
-          
           showTotalCount={true}
         />
       </div>
