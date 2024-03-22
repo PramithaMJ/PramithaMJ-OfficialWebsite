@@ -52,7 +52,6 @@ const cardData = [
     title: "DevOps",
     description: [
       "Linux",
-      "Fedora",
       "BashScripts",
       "GitOps",
       "Terraform",
