@@ -54,7 +54,6 @@ const MHome = () => {
             <About />
             <Services />
             {/* <HomeProject /> */}
-            
             {/* <Testimonials /> */}
             {/* <Title>Latest Blogs...</Title> */}
             {/* <LatestBlogs /> */}
