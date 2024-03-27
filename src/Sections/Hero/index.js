@@ -233,9 +233,10 @@ const HeroSection = () => {
           {/* <Title>Unleashing the power of code to shape my life, one line at a time! 🚀✨</Title> */}
           <Title>Hi,I'm Pramitha</Title>
           <SubText>
-            I'm a passionate computer engineer with a love for web development,
-            and a strong desire to learn and grow. I'm always looking for new
-            opportunities to expand my knowledge and skills.
+          I'm a passionate computer engineer with a deep love for DevOps, SRE and software development,
+           driven by a strong desire to learn and grow. I'm constantly seeking new opportunities to expand
+            my knowledge and skills in these areas, eager to contribute to innovative projects and drive
+             positive change through technology.
           </SubText>
           {/* <SubText>
             I'm a passionate computer engineer with a love for web development,

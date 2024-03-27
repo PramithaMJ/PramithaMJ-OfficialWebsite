@@ -167,8 +167,8 @@ const About = () => {
             <Text>
               I am Pramitha Jayasooriya, a third-year undergraduate of the Faculty of Engineering, University of Ruhuna.
               I am reading for a BSc. (Hons.) Degree in Computer Engineering.
-              I am very interested in computer programming, web development, and software development.
-              I have done several projects related to software development and web development.
+              I am very interested in Devops, SRE, computer programming, web development, and software development.
+              I have done several projects related to these areas.
               I do my best to honor their commitment. In addition, I want to develop a positive outlook on life and strive to be a respected member of the society.
 
               I believe everything is an Art when you put your consciousness in it.
