@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dd16eb60.css",
-    "main.js": "/static/js/main.a9020e51.js",
+    "main.js": "/static/js/main.420824db.js",
     "static/js/53.014c5af3.chunk.js": "/static/js/53.014c5af3.chunk.js",
     "static/js/767.f2908b20.chunk.js": "/static/js/767.f2908b20.chunk.js",
     "static/js/163.fc15150a.chunk.js": "/static/js/163.fc15150a.chunk.js",
@@ -34,7 +34,6 @@
     "static/media/Bg.png": "/static/media/Bg.c2ca6719cb61fd761ac6.png",
     "static/media/hand.svg": "/static/media/hand.86c7a6f7169a202ec32a6cf631f11ec3.svg",
     "static/media/CloudBatch.png": "/static/media/CloudBatch.dffd7e53797662a82c32.png",
-    "static/media/Pramitha_CV.pdf": "/static/media/Pramitha_CV.1da0906f32c5f2752360.pdf",
     "static/media/Ga.png": "/static/media/Ga.1d2a9805136075384e1d.png",
     "static/media/SoftSkills.jpeg": "/static/media/SoftSkills.035658b991520e27e194.jpeg",
     "static/media/Sk2.jpg": "/static/media/Sk2.5147f4024139937ff9c1.jpg",
@@ -49,6 +48,7 @@
     "static/media/MyNew_bg.png": "/static/media/MyNew_bg.c723ce30c69e1a5e25e1.png",
     "static/media/javaSliit2.jpg": "/static/media/javaSliit2.021f55818210d65fa9e8.jpg",
     "static/media/Design_Patterns.jpg": "/static/media/Design_Patterns.ebd42ab8ddcb48867ae8.jpg",
+    "static/media/Pramitha_CV.pdf": "/static/media/Pramitha_CV.33d1b768fcf231a9e974.pdf",
     "static/media/LifePill.png": "/static/media/LifePill.ff3fb71512b371c4bed7.png",
     "static/media/Java_SLIIT.jpeg": "/static/media/Java_SLIIT.c14a9b1168688139414c.jpeg",
     "static/media/mypic.png": "/static/media/mypic.18f2fcf0d447943862e2.png",
@@ -119,7 +119,7 @@
     "static/media/modal-close.svg": "/static/media/modal-close.629ae571745a2968ab85.svg",
     "static/media/toggle-light.svg": "/static/media/toggle-light.28152a5f3e52dffa9460.svg",
     "main.dd16eb60.css.map": "/static/css/main.dd16eb60.css.map",
-    "main.a9020e51.js.map": "/static/js/main.a9020e51.js.map",
+    "main.420824db.js.map": "/static/js/main.420824db.js.map",
     "53.014c5af3.chunk.js.map": "/static/js/53.014c5af3.chunk.js.map",
     "767.f2908b20.chunk.js.map": "/static/js/767.f2908b20.chunk.js.map",
     "163.fc15150a.chunk.js.map": "/static/js/163.fc15150a.chunk.js.map",
@@ -127,6 +127,6 @@
   },
   "entrypoints": [
     "static/css/main.dd16eb60.css",
-    "static/js/main.a9020e51.js"
+    "static/js/main.420824db.js"
   ]
 }
