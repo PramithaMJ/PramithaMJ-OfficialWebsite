@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dd16eb60.css",
-    "main.js": "/static/js/main.420824db.js",
+    "main.js": "/static/js/main.00300c50.js",
     "static/js/53.014c5af3.chunk.js": "/static/js/53.014c5af3.chunk.js",
     "static/js/767.f2908b20.chunk.js": "/static/js/767.f2908b20.chunk.js",
     "static/js/163.fc15150a.chunk.js": "/static/js/163.fc15150a.chunk.js",
@@ -47,8 +47,8 @@
     "static/media/Git.png": "/static/media/Git.09c8f7bac733cf9cdc38.png",
     "static/media/MyNew_bg.png": "/static/media/MyNew_bg.c723ce30c69e1a5e25e1.png",
     "static/media/javaSliit2.jpg": "/static/media/javaSliit2.021f55818210d65fa9e8.jpg",
+    "static/media/Pramitha_CV.pdf": "/static/media/Pramitha_CV.de5410d676e141507bdf.pdf",
     "static/media/Design_Patterns.jpg": "/static/media/Design_Patterns.ebd42ab8ddcb48867ae8.jpg",
-    "static/media/Pramitha_CV.pdf": "/static/media/Pramitha_CV.33d1b768fcf231a9e974.pdf",
     "static/media/LifePill.png": "/static/media/LifePill.ff3fb71512b371c4bed7.png",
     "static/media/Java_SLIIT.jpeg": "/static/media/Java_SLIIT.c14a9b1168688139414c.jpeg",
     "static/media/mypic.png": "/static/media/mypic.18f2fcf0d447943862e2.png",
@@ -119,7 +119,7 @@
     "static/media/modal-close.svg": "/static/media/modal-close.629ae571745a2968ab85.svg",
     "static/media/toggle-light.svg": "/static/media/toggle-light.28152a5f3e52dffa9460.svg",
     "main.dd16eb60.css.map": "/static/css/main.dd16eb60.css.map",
-    "main.420824db.js.map": "/static/js/main.420824db.js.map",
+    "main.00300c50.js.map": "/static/js/main.00300c50.js.map",
     "53.014c5af3.chunk.js.map": "/static/js/53.014c5af3.chunk.js.map",
     "767.f2908b20.chunk.js.map": "/static/js/767.f2908b20.chunk.js.map",
     "163.fc15150a.chunk.js.map": "/static/js/163.fc15150a.chunk.js.map",
@@ -127,6 +127,6 @@
   },
   "entrypoints": [
     "static/css/main.dd16eb60.css",
-    "static/js/main.420824db.js"
+    "static/js/main.00300c50.js"
   ]
 }
