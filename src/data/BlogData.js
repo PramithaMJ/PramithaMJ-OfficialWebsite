@@ -11,7 +11,7 @@ export const Blogs = [
     },
        {
         id:2,
-        name:"[Solved] Cross-Site Request Forgery (CSRF) Attacks with Spring Security.e Magic of Git & GitHub",
+        name:"[Solved] Cross-Site Request Forgery (CSRF) Attacks with Spring Security",
         tags:["Spring","CSRF Attack","CSRF protection","Java","SpringSecurity"],
         date:"8 March, 2024",
         imgSrc:"https://miro.medium.com/v2/resize:fit:1400/format:webp/1*QtZ41v540D07G_vGwhMWmg.png",
