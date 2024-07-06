@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.dd16eb60.css",
-    "main.js": "/static/js/main.6a02d714.js",
+    "main.js": "/static/js/main.f4a34b1f.js",
     "static/js/53.014c5af3.chunk.js": "/static/js/53.014c5af3.chunk.js",
     "static/js/767.f2908b20.chunk.js": "/static/js/767.f2908b20.chunk.js",
     "static/js/163.fc15150a.chunk.js": "/static/js/163.fc15150a.chunk.js",
     "static/js/364.c9eb10e3.chunk.js": "/static/js/364.c9eb10e3.chunk.js",
     "static/media/u-said-it-v13-1167(high bitrate).mp3": "/static/media/u-said-it-v13-1167(high bitrate).949cee7ea4a6ad9499db.mp3",
+    "static/media/MyNew.png": "/static/media/MyNew.131ae21998405049ab94.png",
     "static/media/Ar.png": "/static/media/Ar.f72d40df3f96d580998b.png",
     "static/media/Ml.png": "/static/media/Ml.db93c4a48060020fefe9.png",
     "static/media/Ardiuno_C.png": "/static/media/Ardiuno_C.72022fb8eca2eba3bfa1.png",
@@ -26,7 +27,6 @@
     "static/media/Ft.png": "/static/media/Ft.232f5ef1a798c50a9c44.png",
     "static/media/avatar-1.jpg": "/static/media/avatar-1.72c0472c62097ba1712b.jpg",
     "static/media/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg": "/static/media/patrick-tomasso-Oaqk7qqNh_c-unsplash.8ca90014fb6ce5980110.jpg",
-    "static/media/MyNew.png": "/static/media/MyNew.131ae21998405049ab94.png",
     "static/media/Bs.png": "/static/media/Bs.c49ad5f1921461637605.png",
     "static/media/SLBM.png": "/static/media/SLBM.9023a42a134e7a2c20bf.png",
     "static/media/Vt.png": "/static/media/Vt.a2cff0ef7b0bf31a2770.png",
@@ -52,6 +52,7 @@
     "static/media/LifePill.png": "/static/media/LifePill.ff3fb71512b371c4bed7.png",
     "static/media/Java_SLIIT.jpeg": "/static/media/Java_SLIIT.c14a9b1168688139414c.jpeg",
     "static/media/mypic.png": "/static/media/mypic.18f2fcf0d447943862e2.png",
+    "static/media/omi.png": "/static/media/omi.79be3fc4218f917b8f29.png",
     "static/media/Xtream.png": "/static/media/Xtream.ca1fb115be4a788007db.png",
     "static/media/Programming_Meta.jpg": "/static/media/Programming_Meta.2e5cc6ff591943bd8ee1.jpg",
     "static/media/Relational_Database_Design.jpg": "/static/media/Relational_Database_Design.2a47a7f262c95c7a1b8b.jpg",
@@ -119,7 +120,7 @@
     "static/media/modal-close.svg": "/static/media/modal-close.629ae571745a2968ab85.svg",
     "static/media/toggle-light.svg": "/static/media/toggle-light.28152a5f3e52dffa9460.svg",
     "main.dd16eb60.css.map": "/static/css/main.dd16eb60.css.map",
-    "main.6a02d714.js.map": "/static/js/main.6a02d714.js.map",
+    "main.f4a34b1f.js.map": "/static/js/main.f4a34b1f.js.map",
     "53.014c5af3.chunk.js.map": "/static/js/53.014c5af3.chunk.js.map",
     "767.f2908b20.chunk.js.map": "/static/js/767.f2908b20.chunk.js.map",
     "163.fc15150a.chunk.js.map": "/static/js/163.fc15150a.chunk.js.map",
@@ -127,6 +128,6 @@
   },
   "entrypoints": [
     "static/css/main.dd16eb60.css",
-    "static/js/main.6a02d714.js"
+    "static/js/main.f4a34b1f.js"
   ]
 }
