@@ -231,7 +231,7 @@ const HeroSection = () => {
           </Topic>
           
           {/* <Title>Unleashing the power of code to shape my life, one line at a time! 🚀✨</Title> */}
-          <Title>Hi,I'm Pramitha</Title>
+          <Title>Hi,I'm Pramitha Jayasooriya</Title>
           <SubText>
           I'm a passionate computer engineer with a deep love for DevOps, SRE and software development,
            driven by a strong desire to learn and grow. I'm constantly seeking new opportunities to expand
