@@ -57,7 +57,7 @@ const cardData = [
       "GitOps",
       "Terraform",
       "Ansible",
-      "Jenkin",
+      "Jenkins",
       "CI/CD",
       "Docker",
       "Kubernetes",
@@ -74,6 +74,9 @@ const cardData = [
       "AWS",
       "RabbitMQ",
       "Machine Learning",
+      "Grafana",
+      "Prometheus",
+      "Microservices",
 
     ],
   },
