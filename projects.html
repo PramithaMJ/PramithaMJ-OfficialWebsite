@@ -6,6 +6,9 @@
     <title>Projects - PramithaMJ</title>
     <meta name="description" content="Portfolio of projects by Pramitha Jayasooriya">
     <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,84 +17,180 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
             min-height: 100vh;
             color: #333;
+            overflow-x: hidden;
         }
         
         .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
             padding: 1rem 2rem;
             background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
         }
         
         .nav a {
             color: white;
             text-decoration: none;
             font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
         }
         
         .nav a:hover {
-            opacity: 0.8;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 8rem 2rem 4rem;
         }
         
-        .header {
+        .hero {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
             color: white;
         }
         
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #fff, #e2e8f0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
         
-        .header p {
-            font-size: 1.2rem;
+        .hero p {
+            font-size: 1.3rem;
             opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
         
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 2rem;
+            margin-bottom: 4rem;
         }
         
         .project-card {
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #d946ef);
         }
         
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(31, 38, 135, 0.5);
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
         
         .project-icon {
             font-size: 3rem;
-            margin-bottom: 1rem;
+            padding: 1rem;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
         }
         
-        .project-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
+        .project-info h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
         }
         
-        .project-card p {
-            margin-bottom: 1.5rem;
-            opacity: 0.7;
-            line-height: 1.6;
+        .project-type {
+            font-size: 0.9rem;
+            color: #6366f1;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .project-description {
+            margin-bottom: 2rem;
+            color: #475569;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .tech-tag {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
         }
         
         .project-links {
@@ -101,27 +200,67 @@
         }
         
         .btn {
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
+            font-weight: 600;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .btn-primary {
-            background: #667eea;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
             color: white;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
         }
         
         .btn-secondary {
-            background: transparent;
-            color: #667eea;
-            border: 2px solid #667eea;
+            background: rgba(99, 102, 241, 0.1);
+            color: #6366f1;
+            border: 2px solid rgba(99, 102, 241, 0.2);
         }
         
         .btn:hover {
             transform: translateY(-2px);
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(99, 102, 241, 0.15);
+        }
+        
+        .stats-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
         }
         
         @media (max-width: 768px) {
@@ -129,71 +268,219 @@
                 grid-template-columns: 1fr;
             }
             
-            .header h1 {
-                font-size: 2rem;
+            .nav-links {
+                display: none;
+            }
+            
+            .container {
+                padding: 6rem 1rem 2rem;
+            }
+            
+            .project-card {
+                padding: 2rem;
+            }
+            
+            .project-header {
+                flex-direction: column;
+                text-align: center;
             }
         }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .project-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+        .project-card:nth-child(4) { animation-delay: 0.4s; }
+        .project-card:nth-child(5) { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
-    <div class="nav">
-        <a href="./">&larr; Back to Home</a>
-    </div>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="./" class="nav-logo">PramithaMJ</a>
+            <div class="nav-links">
+                <a href="./">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="https://github.com/PramithaMJ" target="_blank">GitHub</a>
+                <a href="mailto:pramithamj@example.com">Contact</a>
+            </div>
+        </div>
+    </nav>
     
     <div class="container">
-        <div class="header">
+        <div class="hero">
             <h1>My Projects</h1>
-            <p>A collection of applications, tools, and extensions I've built</p>
+            <p>A collection of innovative applications, tools, and extensions that demonstrate my passion for creating meaningful software solutions</p>
         </div>
         
-        <div class="projects-grid">
+        <div class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>5+</h3>
+                    <p>Active Projects</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4</h3>
+                    <p>Tech Stacks</p>
+                </div>
+                <div class="stat-item">
+                    <h3>2</h3>
+                    <p>VS Code Extensions</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Open Source</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="projects-grid" id="projects">
             <div class="project-card">
-                <div class="project-icon">🔍</div>
-                <h3>Ballerina Lint</h3>
-                <p>A powerful static analysis and linting tool for the Ballerina programming language. Helps developers improve code quality and catch errors early.</p>
+                <div class="project-header">
+                    <div class="project-icon">🔍</div>
+                    <div class="project-info">
+                        <h3>Ballerina Lint</h3>
+                        <div class="project-type">Static Analysis Tool</div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    A powerful static analysis and linting tool for the Ballerina programming language. Helps developers improve code quality, catch errors early, and follow best practices in Ballerina development.
+                </div>
+                <div class="project-tech">
+                    <span class="tech-tag">Ballerina</span>
+                    <span class="tech-tag">Static Analysis</span>
+                    <span class="tech-tag">Developer Tools</span>
+                    <span class="tech-tag">Code Quality</span>
+                </div>
                 <div class="project-links">
-                    <a href="./ballerina-lint/" class="btn btn-primary">View Project</a>
-                    <a href="https://github.com/PramithaMJ/ballerina-lint" class="btn btn-secondary" target="_blank">Source Code</a>
+                    <a href="./ballerina-lint/" class="btn btn-primary">
+                        🚀 Live Demo
+                    </a>
+                    <a href="https://github.com/PramithaMJ/ballerina-lint" class="btn btn-secondary" target="_blank">
+                        📁 Source Code
+                    </a>
                 </div>
             </div>
             
             <div class="project-card">
-                <div class="project-icon">⚙️</div>
-                <h3>CPU Scheduling Visualizer</h3>
-                <p>Interactive visualization of various CPU scheduling algorithms including FCFS, SJF, Priority, and Round Robin. Perfect for learning OS concepts.</p>
+                <div class="project-header">
+                    <div class="project-icon">⚙️</div>
+                    <div class="project-info">
+                        <h3>CPU Scheduling Visualizer</h3>
+                        <div class="project-type">Educational Tool</div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    Interactive visualization of various CPU scheduling algorithms including FCFS, SJF, Priority, Round Robin, and more. Perfect for students learning operating systems concepts.
+                </div>
+                <div class="project-tech">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">HTML5 Canvas</span>
+                    <span class="tech-tag">Data Visualization</span>
+                    <span class="tech-tag">Education</span>
+                </div>
                 <div class="project-links">
-                    <a href="./cpu-scheduling-visualizer/" class="btn btn-primary">View Project</a>
-                    <a href="https://github.com/PramithaMJ/cpu-scheduling-visualizer" class="btn btn-secondary" target="_blank">Source Code</a>
+                    <a href="./cpu-scheduling-visualizer/" class="btn btn-primary">
+                        🚀 Live Demo
+                    </a>
+                    <a href="https://github.com/PramithaMJ/cpu-scheduling-visualizer" class="btn btn-secondary" target="_blank">
+                        📁 Source Code
+                    </a>
                 </div>
             </div>
             
             <div class="project-card">
-                <div class="project-icon">🏥</div>
-                <h3>MS Pet Clinic</h3>
-                <p>A microservices-based Pet Clinic application built with Spring Boot, demonstrating modern cloud-native architecture patterns.</p>
+                <div class="project-header">
+                    <div class="project-icon">🏥</div>
+                    <div class="project-info">
+                        <h3>MS Pet Clinic</h3>
+                        <div class="project-type">Microservices Architecture</div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    A microservices-based Pet Clinic application built with Spring Boot, demonstrating modern cloud-native architecture patterns, service discovery, and distributed systems.
+                </div>
+                <div class="project-tech">
+                    <span class="tech-tag">Spring Boot</span>
+                    <span class="tech-tag">Microservices</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Cloud Native</span>
+                </div>
                 <div class="project-links">
-                    <a href="./ms-petclinic/" class="btn btn-primary">View Project</a>
-                    <a href="https://github.com/PramithaMJ/ms-petclinic" class="btn btn-secondary" target="_blank">Source Code</a>
+                    <a href="./ms-petclinic/" class="btn btn-primary">
+                        🚀 Live Demo
+                    </a>
+                    <a href="https://github.com/PramithaMJ/ms-petclinic" class="btn btn-secondary" target="_blank">
+                        📁 Source Code
+                    </a>
                 </div>
             </div>
             
             <div class="project-card">
-                <div class="project-icon">📦</div>
-                <h3>GoNexus VS Code Extension</h3>
-                <p>Enhanced Go development experience for Visual Studio Code with advanced features, debugging tools, and productivity enhancements.</p>
+                <div class="project-header">
+                    <div class="project-icon">📦</div>
+                    <div class="project-info">
+                        <h3>GoNexus Extension</h3>
+                        <div class="project-type">VS Code Extension</div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    Enhanced Go development experience for Visual Studio Code with advanced features, debugging tools, code completion, and productivity enhancements for Go developers.
+                </div>
+                <div class="project-tech">
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">VS Code API</span>
+                    <span class="tech-tag">Go Language</span>
+                    <span class="tech-tag">Developer Tools</span>
+                </div>
                 <div class="project-links">
-                    <a href="./gonexus/" class="btn btn-primary">View Extension</a>
-                    <a href="https://marketplace.visualstudio.com/items?itemName=Pramitha.gonexus" class="btn btn-secondary" target="_blank">Install</a>
+                    <a href="./gonexus/" class="btn btn-primary">
+                        📖 Learn More
+                    </a>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=Pramitha.gonexus" class="btn btn-secondary" target="_blank">
+                        💾 Install Extension
+                    </a>
                 </div>
             </div>
             
             <div class="project-card">
-                <div class="project-icon">🖼️</div>
-                <h3>Image Segmentation Demo</h3>
-                <p>Interactive demonstration of image segmentation algorithms including Otsu's Thresholding and Region Growing techniques.</p>
+                <div class="project-header">
+                    <div class="project-icon">🖼️</div>
+                    <div class="project-info">
+                        <h3>Image Segmentation Demo</h3>
+                        <div class="project-type">Computer Vision</div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    Interactive demonstration of advanced image segmentation algorithms including Otsu's Thresholding and Region Growing techniques with real-time visualization.
+                </div>
+                <div class="project-tech">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Computer Vision</span>
+                    <span class="tech-tag">Canvas API</span>
+                    <span class="tech-tag">Image Processing</span>
+                </div>
                 <div class="project-links">
-                    <a href="./image-segmantion/" class="btn btn-primary">View Demo</a>
-                    <a href="https://github.com/PramithaMJ/EC-7212-Take-Home-Assignment-02" class="btn btn-secondary" target="_blank">Source Code</a>
+                    <a href="./image-segmantion/" class="btn btn-primary">
+                        🚀 Live Demo
+                    </a>
+                    <a href="https://github.com/PramithaMJ/EC-7212-Take-Home-Assignment-02" class="btn btn-secondary" target="_blank">
+                        📁 Source Code
+                    </a>
                 </div>
             </div>
         </div>
