@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - PramithaMJ</title>
+    <meta name="description" content="Portfolio of projects by Pramitha Jayasooriya">
+    <link rel="icon" href="favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .nav {
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav a:hover {
+            opacity: 0.8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(31, 38, 135, 0.5);
+        }
+        
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .project-card p {
+            margin-bottom: 1.5rem;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="./">&larr; Back to Home</a>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>My Projects</h1>
+            <p>A collection of applications, tools, and extensions I've built</p>
+        </div>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">🔍</div>
+                <h3>Ballerina Lint</h3>
+                <p>A powerful static analysis and linting tool for the Ballerina programming language. Helps developers improve code quality and catch errors early.</p>
+                <div class="project-links">
+                    <a href="./ballerina-lint/" class="btn btn-primary">View Project</a>
+                    <a href="https://github.com/PramithaMJ/ballerina-lint" class="btn btn-secondary" target="_blank">Source Code</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-icon">⚙️</div>
+                <h3>CPU Scheduling Visualizer</h3>
+                <p>Interactive visualization of various CPU scheduling algorithms including FCFS, SJF, Priority, and Round Robin. Perfect for learning OS concepts.</p>
+                <div class="project-links">
+                    <a href="./cpu-scheduling-visualizer/" class="btn btn-primary">View Project</a>
+                    <a href="https://github.com/PramithaMJ/cpu-scheduling-visualizer" class="btn btn-secondary" target="_blank">Source Code</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-icon">🏥</div>
+                <h3>MS Pet Clinic</h3>
+                <p>A microservices-based Pet Clinic application built with Spring Boot, demonstrating modern cloud-native architecture patterns.</p>
+                <div class="project-links">
+                    <a href="./ms-petclinic/" class="btn btn-primary">View Project</a>
+                    <a href="https://github.com/PramithaMJ/ms-petclinic" class="btn btn-secondary" target="_blank">Source Code</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-icon">📦</div>
+                <h3>GoNexus VS Code Extension</h3>
+                <p>Enhanced Go development experience for Visual Studio Code with advanced features, debugging tools, and productivity enhancements.</p>
+                <div class="project-links">
+                    <a href="./gonexus/" class="btn btn-primary">View Extension</a>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=Pramitha.gonexus" class="btn btn-secondary" target="_blank">Install</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-icon">🖼️</div>
+                <h3>Image Segmentation Demo</h3>
+                <p>Interactive demonstration of image segmentation algorithms including Otsu's Thresholding and Region Growing techniques.</p>
+                <div class="project-links">
+                    <a href="./image-segmantion/" class="btn btn-primary">View Demo</a>
+                    <a href="https://github.com/PramithaMJ/EC-7212-Take-Home-Assignment-02" class="btn btn-secondary" target="_blank">Source Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
