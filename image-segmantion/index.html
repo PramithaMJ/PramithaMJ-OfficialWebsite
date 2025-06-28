@@ -3,231 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Segmentation Tools - PramithaMJ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Image Segmentation Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="dark-mode">
+    <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <label class="switch">
+            <input type="checkbox" id="theme-switch" checked>
+            <span class="slider round"></span>
+        </label>
+        <i class="fas fa-moon"></i>
+    </div>
+
     <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <a href="../" class="nav-logo">PramithaMJ</a>
-                <div class="nav-links">
-                    <a href="../">Home</a>
-                    <a href="../#about">About</a>
-                    <a href="../#projects">Projects</a>
-                    <a href="../#contact">Contact</a>
-                </div>
-            </div>
-        </nav>
+        <h1>Image Segmentation Algorithms</h1>
+        <p>Interactive demonstration of Otsu's Thresholding and Region Growing segmentation algorithms</p>
     </header>
 
-    <main class="container">
-        <section class="hero">
-            <h1 class="title">Image Segmentation Tools</h1>
-            <p class="subtitle">Computer Vision Algorithms Implementation</p>
-            <p class="description">
-                This project demonstrates two fundamental image segmentation algorithms 
-                implemented as part of my Computer Vision coursework (EC-7212).
-            </p>
-        </section>
+    <main>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="otsu">Otsu's Thresholding</button>
+            <button class="tab-btn" data-tab="region-growing">Region Growing</button>
+        </div>
 
-        <section class="algorithms-info">
-            <div class="algorithm-card">
-                <h3>1. Otsu's Thresholding Algorithm</h3>
-                <p>
-                    Automatic image thresholding method that calculates the optimal threshold 
-                    by maximizing between-class variance. This implementation includes Gaussian 
-                    noise simulation to demonstrate robustness.
-                </p>
-                <div class="tech-stack">
-                    <span class="tech-tag">OpenCV</span>
-                    <span class="tech-tag">NumPy</span>
-                    <span class="tech-tag">Matplotlib</span>
+        <div class="tab-content active" id="otsu">
+            <div class="algorithm-controls">
+                <h2>Otsu's Thresholding Algorithm</h2>
+                <p>Upload an image and see how Otsu's algorithm automatically finds the optimal threshold for segmentation.</p>
+                
+                <div class="upload-container">
+                    <label for="otsu-file-upload" class="upload-btn">
+                        <i class="fas fa-upload"></i> Upload Image
+                    </label>
+                    <input type="file" id="otsu-file-upload" accept="image/*">
+                    <span id="otsu-file-name">No file selected</span>
+                </div>
+
+                <div class="options">
+                    <div class="option-group">
+                        <label for="noise-slider">Gaussian Noise (σ):</label>
+                        <input type="range" id="noise-slider" min="0" max="50" step="1" value="15">
+                        <span id="noise-value">15</span>
+                    </div>
+                    <button id="otsu-apply" class="apply-btn">Apply Algorithm</button>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="show-steps-otsu" checked>
+                    <label for="show-steps-otsu">Show Algorithm Steps</label>
                 </div>
             </div>
 
-            <div class="algorithm-card">
-                <h3>2. Region Growing Segmentation</h3>
-                <p>
-                    Pixel-based segmentation method that grows regions from seed points by 
-                    including neighboring pixels that meet similarity criteria. Interactive 
-                    seed point selection for dynamic segmentation.
-                </p>
-                <div class="tech-stack">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Computer Vision</span>
-                    <span class="tech-tag">Image Processing</span>
+            <div class="visualization-area">
+                <div class="image-container">
+                    <h3>Original Image</h3>
+                    <canvas id="otsu-original"></canvas>
+                </div>
+                <div class="image-container">
+                    <h3>Noisy Image</h3>
+                    <canvas id="otsu-noisy"></canvas>
+                </div>
+                <div class="image-container histogram-container">
+                    <h3>Histogram with Threshold</h3>
+                    <canvas id="otsu-histogram"></canvas>
+                    <div id="otsu-threshold-value">Threshold: -</div>
+                </div>
+                <div class="image-container">
+                    <h3>Segmentation Result</h3>
+                    <canvas id="otsu-result"></canvas>
+                    <button id="otsu-download" class="download-btn" disabled>
+                        <i class="fas fa-download"></i> Download Result
+                    </button>
                 </div>
             </div>
-        </section>
 
-        <section class="demo-section">
-            <h2>Algorithm Demonstrations</h2>
-            
-            <div class="demo-container">
-                <div class="demo-item">
-                    <h3>Otsu's Thresholding Results</h3>
-                    <div class="image-comparison">
-                        <div class="image-item">
-                            <img src="input images/task1_input.png" alt="Task 1 Input" onerror="this.style.display='none'">
-                            <p>Input Image</p>
-                        </div>
-                        <div class="arrow">→</div>
-                        <div class="image-item">
-                            <img src="output images/task1_otsu_results.png" alt="Otsu Results" onerror="this.style.display='none'">
-                            <p>Otsu's Thresholding Result</p>
-                        </div>
-                    </div>
-                    <div class="code-snippet">
-                        <h4>Key Implementation:</h4>
-                        <pre><code># Apply Otsu's thresholding
-_, otsu_thresh = cv2.threshold(
-    noisy_image, 0, 255, 
-    cv2.THRESH_BINARY + cv2.THRESH_OTSU
-)</code></pre>
-                    </div>
-                </div>
-
-                <div class="demo-item">
-                    <h3>Region Growing Results</h3>
-                    <div class="image-comparison">
-                        <div class="image-item">
-                            <img src="input images/task2_input.png" alt="Task 2 Input" onerror="this.style.display='none'">
-                            <p>Input Image</p>
-                        </div>
-                        <div class="arrow">→</div>
-                        <div class="image-item">
-                            <img src="output images/task2_region_growing_results.png" alt="Region Growing Results" onerror="this.style.display='none'">
-                            <p>Region Growing Result</p>
-                        </div>
-                    </div>
-                    <div class="code-snippet">
-                        <h4>Key Implementation:</h4>
-                        <pre><code># Region growing algorithm
-if abs(int(gray[y, x]) - seed_value) <= threshold:
-    visited[y, x] = True
-    result[y, x] = 255
-    stack.extend([(x+1, y), (x-1, y), (x, y+1), (x, y-1)])</code></pre>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="technical-details">
-            <h2>Technical Implementation</h2>
-            
-            <div class="details-grid">
-                <div class="detail-card">
-                    <h3>Project Structure</h3>
-                    <div class="file-tree">
-                        <pre>EC-7212-Take-Home-Assignment-02/
-├── input images/
-│   ├── task1_input.png
-│   └── task2_input.png
-├── output images/
-│   ├── task1_otsu_results.png
-│   └── task2_region_growing_results.png
-├── src/
-│   ├── task1_otsu_algorithm.py
-│   └── task2_region_glowing.py
-└── README.md</pre>
-                    </div>
-                </div>
-
-                <div class="detail-card">
-                    <h3>Dependencies</h3>
-                    <div class="dependencies">
-                        <div class="dep-item">
-                            <strong>Python 3.x</strong>
-                            <span>Core programming language</span>
-                        </div>
-                        <div class="dep-item">
-                            <strong>OpenCV (cv2)</strong>
-                            <span>Computer vision operations</span>
-                        </div>
-                        <div class="dep-item">
-                            <strong>NumPy</strong>
-                            <span>Numerical computations</span>
-                        </div>
-                        <div class="dep-item">
-                            <strong>Matplotlib</strong>
-                            <span>Visualization and plotting</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="detail-card">
-                    <h3>Algorithm Features</h3>
-                    <ul class="features-list">
-                        <li>Automatic threshold calculation using Otsu's method</li>
-                        <li>Gaussian noise simulation for robustness testing</li>
-                        <li>Interactive seed point selection for region growing</li>
-                        <li>Comprehensive visualization of results</li>
-                        <li>Comparative analysis with original images</li>
-                        <li>Performance metrics and threshold optimization</li>
+            <div class="algorithm-explanation">
+                <h3>How Otsu's Algorithm Works</h3>
+                <ol id="otsu-steps">
+                    <li>Load grayscale image</li>
+                    <li>Add Gaussian noise to the image (optional)</li>
+                    <li>Calculate the image histogram</li>
+                    <li>For each possible threshold (0-255):</li>
+                    <ul>
+                        <li>Separate pixels into two classes (background and foreground)</li>
+                        <li>Calculate the class probabilities and class means</li>
+                        <li>Calculate the between-class variance</li>
                     </ul>
+                    <li>Select the threshold that maximizes between-class variance</li>
+                    <li>Apply the threshold to create binary segmentation</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="tab-content" id="region-growing">
+            <div class="algorithm-controls">
+                <h2>Region Growing Segmentation</h2>
+                <p>Upload an image, place seed points by clicking, and grow regions based on intensity similarity.</p>
+                
+                <div class="upload-container">
+                    <label for="region-file-upload" class="upload-btn">
+                        <i class="fas fa-upload"></i> Upload Image
+                    </label>
+                    <input type="file" id="region-file-upload" accept="image/*">
+                    <span id="region-file-name">No file selected</span>
                 </div>
 
-                <div class="detail-card">
-                    <h3>Usage Instructions</h3>
-                    <div class="usage-steps">
-                        <div class="step">
-                            <span class="step-number">1</span>
-                            <div class="step-content">
-                                <strong>Install Dependencies</strong>
-                                <code>pip install opencv-python numpy matplotlib</code>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <span class="step-number">2</span>
-                            <div class="step-content">
-                                <strong>Run Otsu's Algorithm</strong>
-                                <code>python src/task1_otsu_algorithm.py</code>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <span class="step-number">3</span>
-                            <div class="step-content">
-                                <strong>Run Region Growing</strong>
-                                <code>python src/task2_region_glowing.py</code>
-                            </div>
+                <div class="options">
+                    <div class="option-group">
+                        <label for="threshold-slider">Intensity Threshold:</label>
+                        <input type="range" id="threshold-slider" min="1" max="100" step="1" value="50">
+                        <span id="threshold-value">50</span>
+                    </div>
+                    <button id="clear-seeds" class="secondary-btn">Clear Seeds</button>
+                    <button id="region-apply" class="apply-btn">Apply Algorithm</button>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="show-steps-region" checked>
+                    <label for="show-steps-region">Show Algorithm Steps</label>
+                </div>
+            </div>
+
+            <div class="visualization-area">
+                <div class="image-container">
+                    <h3>Original Image (Click to add seeds)</h3>
+                    <canvas id="region-original"></canvas>
+                    <div class="seed-info">Seeds: <span id="seed-count">0</span></div>
+                </div>
+                <div class="image-container">
+                    <h3>Seeds Placed</h3>
+                    <canvas id="region-seeds"></canvas>
+                </div>
+                <div class="image-container">
+                    <h3>Region Growing Progress</h3>
+                    <canvas id="region-progress"></canvas>
+                    <div class="progress-controls">
+                        <button id="step-back" disabled><i class="fas fa-step-backward"></i></button>
+                        <button id="pause-play"><i class="fas fa-play"></i></button>
+                        <button id="step-forward" disabled><i class="fas fa-step-forward"></i></button>
+                        <div class="speed-control">
+                            <label for="speed-slider">Speed:</label>
+                            <input type="range" id="speed-slider" min="1" max="5" step="1" value="3">
                         </div>
                     </div>
                 </div>
+                <div class="image-container">
+                    <h3>Final Result</h3>
+                    <canvas id="region-result"></canvas>
+                    <button id="region-download" class="download-btn" disabled>
+                        <i class="fas fa-download"></i> Download Result
+                    </button>
+                </div>
             </div>
-        </section>
 
-        <section class="source-code">
-            <h2>Source Code & Documentation</h2>
-            <div class="source-links">
-                <a href="https://github.com/PramithaMJ/EC-7212-Take-Home-Assignment-02" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="github-link">
-                    <svg viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    View on GitHub
-                </a>
-                <a href="README.md" class="readme-link">
-                    📖 Read Documentation
-                </a>
+            <div class="algorithm-explanation">
+                <h3>How Region Growing Works</h3>
+                <ol id="region-steps">
+                    <li>Load grayscale image</li>
+                    <li>Select seed points (manually or automatically)</li>
+                    <li>Calculate mean intensity of seed points</li>
+                    <li>Use breadth-first search to explore neighboring pixels</li>
+                    <li>Add pixels to the region if their intensity is within the threshold of the region mean</li>
+                    <li>Continue until no more pixels meet the criteria</li>
+                </ol>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 PramithaMJ. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="https://github.com/PramithaMJ" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/pramithamj" target="_blank">LinkedIn</a>
-                <a href="../#contact">Contact</a>
-            </div>
-        </div>
+        <p>Computer Vision Segmentation Algorithms Demo | &copy; 2025 Pramitha Jayasooriya</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

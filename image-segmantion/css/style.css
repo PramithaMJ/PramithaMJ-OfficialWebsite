@@ -1,0 +1,625 @@
+/* Base styles and variables */
+:root {
+    --primary-color: #6563ff;
+    --secondary-color: #3494e6;
+    --accent-color: #ec6ead;
+    --text-color-light: #f5f5f7;
+    --text-color-dark: #333333;
+    --bg-light: #f5f5f7;
+    --bg-dark: #1a1a1a;
+    --card-light: #ffffff;
+    --card-dark: #2d2d2d;
+    --border-light: #e1e1e1;
+    --border-dark: #444444;
+    --shadow-light: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --shadow-dark: rgba(0, 0, 0, 0.3) 0px 8px 24px;
+    --success-color: #4caf50;
+    --error-color: #f44336;
+    --warning-color: #ff9800;
+    --info-color: #2196f3;
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Light & Dark Mode */
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--bg-light);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-color-light);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--secondary-color);
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--accent-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 24px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+header p {
+    margin-top: 0;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem 3rem;
+}
+
+/* Tab Navigation */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.tab-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    color: var(--text-color-dark);
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.dark-mode .tab-btn {
+    color: var(--text-color-light);
+}
+
+.tab-btn:hover {
+    opacity: 1;
+}
+
+.tab-btn.active {
+    opacity: 1;
+}
+
+.tab-btn:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    transform: translateX(-50%);
+    transition: width 0.3s;
+}
+
+.tab-btn.active:after {
+    width: 80%;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Algorithm Controls Section */
+.algorithm-controls {
+    background-color: var(--card-light);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-light);
+}
+
+.dark-mode .algorithm-controls {
+    background-color: var(--card-dark);
+    box-shadow: var(--shadow-dark);
+}
+
+.algorithm-controls h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.algorithm-controls p {
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+/* File Upload Styles */
+.upload-container {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.upload-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.upload-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#otsu-file-upload, #region-file-upload {
+    display: none;
+}
+
+#otsu-file-name, #region-file-name {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Option Styles */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.option-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.option-group label {
+    min-width: 100px;
+}
+
+.option-group input[type="range"] {
+    flex: 1;
+    appearance: none;
+    height: 6px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+    border-radius: 3px;
+    outline: none;
+}
+
+.option-group input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.option-group span {
+    min-width: 30px;
+    text-align: right;
+    font-weight: 500;
+}
+
+.apply-btn {
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.apply-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.apply-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.secondary-btn {
+    padding: 0.7rem 1.5rem;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dark-mode .secondary-btn {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.secondary-btn:hover {
+    background-color: rgba(101, 99, 255, 0.1);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Visualization Area */
+.visualization-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.image-container {
+    background-color: var(--card-light);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.dark-mode .image-container {
+    background-color: var(--card-dark);
+    box-shadow: var(--shadow-dark);
+}
+
+.image-container h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.dark-mode .image-container h3 {
+    color: var(--secondary-color);
+}
+
+.image-container canvas {
+    width: 100%;
+    height: auto;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+.dark-mode .image-container canvas {
+    background-color: #333;
+}
+
+.histogram-container {
+    position: relative;
+}
+
+#otsu-threshold-value {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.download-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--info-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.download-btn:hover {
+    background-color: #0b7dda;
+}
+
+.download-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.seed-info {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.progress-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-top: 1rem;
+}
+
+.progress-controls button {
+    background-color: transparent;
+    border: 1px solid var(--border-light);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dark-mode .progress-controls button {
+    border-color: var(--border-dark);
+    color: var(--text-color-light);
+}
+
+.progress-controls button:hover:not(:disabled) {
+    background-color: rgba(101, 99, 255, 0.1);
+    color: var(--primary-color);
+}
+
+.progress-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.speed-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.speed-control input {
+    width: 80px;
+}
+
+/* Algorithm Explanation */
+.algorithm-explanation {
+    background-color: var(--card-light);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: var(--shadow-light);
+}
+
+.dark-mode .algorithm-explanation {
+    background-color: var(--card-dark);
+    box-shadow: var(--shadow-dark);
+}
+
+.algorithm-explanation h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.dark-mode .algorithm-explanation h3 {
+    color: var(--secondary-color);
+}
+
+.algorithm-explanation ol {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+}
+
+.algorithm-explanation li {
+    margin-bottom: 0.5rem;
+}
+
+.algorithm-explanation ul {
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--border-light);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.dark-mode footer {
+    border-color: var(--border-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .visualization-area {
+        grid-template-columns: 1fr;
+    }
+    
+    .options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .option-group {
+        width: 100%;
+    }
+    
+    .apply-btn, .secondary-btn {
+        width: 100%;
+    }
+}
+
+/* Animation for elements */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-content.active {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Active steps highlighting */
+.active-step {
+    background-color: rgba(101, 99, 255, 0.1);
+    color: var(--primary-color);
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.dark-mode .active-step {
+    background-color: rgba(101, 99, 255, 0.2);
+}
+
+/* Status Messages */
+.status {
+    margin-top: 1rem;
+    padding: 0.7rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.status.info {
+    background-color: rgba(33, 150, 243, 0.2);
+    color: var(--info-color);
+    border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.status.success {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: var(--success-color);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.status.error {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: var(--error-color);
+    border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.dark-mode .status.info {
+    background-color: rgba(33, 150, 243, 0.1);
+}
+
+.dark-mode .status.success {
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+.dark-mode .status.error {
+    background-color: rgba(244, 67, 54, 0.1);
+}
