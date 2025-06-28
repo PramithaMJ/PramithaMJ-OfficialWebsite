@@ -101,6 +101,48 @@ header {
     padding: 3rem 1rem 2rem;
 }
 
+.header-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: var(--text-color-dark);
+    background: var(--card-light);
+    border: 2px solid var(--border-light);
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-light);
+}
+
+body.dark-mode .nav-link {
+    color: var(--text-color-light);
+    background: var(--card-dark);
+    border-color: var(--border-dark);
+    box-shadow: var(--shadow-dark);
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 6px 20px rgba(101, 99, 255, 0.3);
+}
+
+.nav-link i {
+    font-size: 1.1rem;
+}
+
 header h1 {
     margin-bottom: 0.5rem;
     font-size: 2.5rem;
@@ -540,6 +582,16 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .header-nav {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .nav-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
     header h1 {
         font-size: 2rem;
     }
