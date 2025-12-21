@@ -49,12 +49,9 @@ const NAME = styled.h3`
 `;
 
 const Card = ({ name, text, image }) => {
-  const Avatar = require(`../../assets/${image}.jpg`);
-
   return (
-    
     <CARD>
-      <Image img={Avatar} width="400" height="400" />
+      <Image img={image} width="400" height="400" />
       <TEXT>{text}</TEXT>
       <NAME>{name}</NAME>
     </CARD>

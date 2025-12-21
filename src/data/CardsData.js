@@ -21,7 +21,7 @@ const cardData = [
       "Tailwind",
       "Styled-Components",
       "Material UI",
-      "Boostrap",
+      "Bootstrap",
       "CSS",
       "SCSS",
     ],
@@ -32,7 +32,7 @@ const cardData = [
     title: "Mobile Development",
     description: [
       "Flutter",
-      "Kotline",
+      "Kotlin",
     ],
   },
   {

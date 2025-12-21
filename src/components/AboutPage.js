@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes, ThemeProvider } from 'styled-components'
-import {DarkTheme} from './Themes';
+import { DarkTheme } from './Themes';
 
 
 import LogoComponent from '../subComponents/LogoComponent';
@@ -11,6 +11,7 @@ import BigTitle from '../subComponents/BigTitlte'
 import astronaut from '../assets/Images/spaceman.png'
 import pmj from "../assets/mypic.png"
 import GithubActivity from '../Sections/GithubActivity/GithubActivity';
+import RecommendationsSection from '../subComponents/RecommendationsSection';
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
@@ -36,7 +37,7 @@ img{
     height: auto;
 }
 `
-const Main =  styled.div`
+const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
   padding: 2rem;
@@ -63,38 +64,38 @@ const Main =  styled.div`
 const AboutPage = () => {
     return (
         <ThemeProvider theme={DarkTheme}>
-<Box>
+            <Box>
 
-<LogoComponent theme='dark'/>
-<SocialIcons theme='dark'/>
-<PowerButton />
-<ParticleComponent theme='dark' />
+                <LogoComponent theme='dark' />
+                <SocialIcons theme='dark' />
+                <PowerButton />
+                <ParticleComponent theme='dark' />
 
-        <Spaceman>
-            <img src={pmj} alt="pramitha" />
-        </Spaceman>    
-        <Main>
-       I am Pramitha Jayasooriya, a third-year undergraduate of the Faculty of Engineering,
-       University of Ruhuna. I am reading for a BSc. (Hons.) Degree in Computer Engineering.
-        I am very interested in computer programming, web development, and software development.
-         I have done several projects related to software development and web development.
-            I do my best to honor their commitment. In addition,
-        I want to develop a positive outlook on life and strive to be a respected member of the society.
-        <br /> <br/>
-        Aspiring Computer Engineer with a specialized focus on Java and Spring technologies.
-        <br/> <br/>
-        I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
-        <br/> <br/>
-        Unleashing the power of code to shape my life, one line at a time! 🚀
-        </Main>
+                <Spaceman>
+                    <img src={pmj} alt="pramitha" />
+                </Spaceman>
+                <Main>
+                    I am Pramitha Jayasooriya, a third-year undergraduate of the Faculty of Engineering,
+                    University of Ruhuna. I am reading for a BSc. (Hons.) Degree in Computer Engineering.
+                    I am very interested in computer programming, web development, and software development.
+                    I have done several projects related to software development and web development.
+                    I do my best to honor their commitment. In addition,
+                    I want to develop a positive outlook on life and strive to be a respected member of the society.
+                    <br /> <br />
+                    Aspiring Computer Engineer with a specialized focus on Java and Spring technologies.
+                    <br /> <br />
+                    I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
+                    <br /> <br />
+                    Unleashing the power of code to shape my life, one line at a time! 🚀
+                </Main>
 
-        <BigTitle text="ABOUT ME" top="10%" left="5%" />
+                <BigTitle text="ABOUT ME" top="10%" left="5%" />
 
-        
-        </Box>
-<GithubActivity/>
+            </Box>
+            <RecommendationsSection />
+            <GithubActivity />
         </ThemeProvider>
-        
+
     )
 }
 

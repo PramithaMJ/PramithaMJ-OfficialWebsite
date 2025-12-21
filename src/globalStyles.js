@@ -18,7 +18,7 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    font-family: 'Source Sans Pro',sans-serif;
+    font-family: 'Outfit',sans-serif;
 }
 
 `

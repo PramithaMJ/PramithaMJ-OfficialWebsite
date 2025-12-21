@@ -3,8 +3,6 @@
 import Ml from "../assets/Images/Ml.png";
 import LifePill from "../assets/Images/LifePill.png";
 import Ar from "../assets/Images/Ar.png";
-import Ft from "../assets/Images/Ft.png";
-import POS from "../assets/Images/POS.png";
 import SM from "../assets/Images/SM.png";
 import Vt from "../assets/Images/Vt.png";
 import Ga from "../assets/Images/Ga.png";
@@ -15,10 +13,38 @@ import Bs from "../assets/Images/Bs.png";
 import Kc from "../assets/Images/Kc.png";
 import Bg from "../assets/Images/Bg.png";
 import Omi from "../assets/Images/omi.png";
+import ProjectPlaceholder from "../assets/Images/project_placeholder.png";
 
 export const Work = [
   {
     id: 1,
+    name: "Enhancing NS-3 for Distributed Network",
+    image: ProjectPlaceholder,
+    description: "Modify NS-3 to run as a distributed system where each network node operates within a separate container. This will allow parallel execution and better utilisation of computing resources, making large-scale network simulations more efficient.",
+    tags: ["NS-3", "Distributed Systems", "C++", "Docker", "Linux"],
+    demo: "#",
+    github: "#"
+  },
+  {
+    id: 2,
+    name: "Ballerina Online Playground",
+    image: ProjectPlaceholder,
+    description: "A web-based interactive playground for writing and executing Ballerina code in real-time.",
+    tags: ["Ballerina", "Web", "Interactive"],
+    demo: "https://ballerina-online-playground.pages.dev/",
+    github: "#"
+  },
+  {
+    id: 23,
+    name: "AuctionHub-Microservice",
+    image: ProjectPlaceholder,
+    description: "The auction website is built on a modern, cloud-native microservices architecture that employs several reliability and scalability patterns.",
+    tags: ["AWS", "Kubernetes", "Microservices", "Go", "Docker"],
+    demo: "https://github.com/PramithaMJ/auction-microservice",
+    github: "https://github.com/PramithaMJ/auction-microservice"
+  },
+  {
+    id: 3,
     name: "LifePill",
     image: LifePill,
     description:
@@ -29,41 +55,17 @@ export const Work = [
     github: "https://github.com/Life-Pill",
   },
   {
-    id: 2,
-    name: "AR Visionary Explorer",
-    image: Ar,
-    description:
-      "AR-Visionary Explora is a revolutionary mobile application designed to enhance the furniture e-commerce experience through the integration of augmented reality (AR) technology. This Flutter-based app empowers users to visualize and assess furniture items in their living spaces before making a purchase, revolutionizing the traditional furniture buying process.",
-    tags: ["Flutter", "Firebase", "ARCore", "Dart"],
-    demo: "https://www.youtube.com/watch?v=-EUqf6oSlH0&t=80s",
-    github: "https://github.com/PramithaMJ/AR_Visionary_Explora.git",
-  },
-  {
-    id: 3,
-    name: "Personal Finance Tracker Web Application",
-    image: Ft,
-    description:
-      "This web application designed to help you track personal finances." +
-      " You can add expenses and income, manage your money, and gain insights from the data and visualizing. ",
-    tags: ["react", "api", "sass"],
-
-    demo: "https://github.com/PramithaMJ/Personal_Financial_Tracker_Web_App.git",
-    github:
-      "https://github.com/PramithaMJ/Personal_Financial_Tracker_Web_App.git",
-  },
-  {
-    id: 4,
-    name: "Point of sale Desktop Application ",
-    image: POS,
-    description:
-      "The Point of Sale (POS) System is a user-friendly application developed using WPF (Windows Presentation Foundation) and C#. It provides an efficient and intuitive interface for managing sales and performing various operations related to product management and user roles.",
-    tags: ["C#", "DOTNet", "WPF", "MVVM Architecture"],
-
-    demo: "https://github.com/PramithaMJ/GroupProject_POS_3990_4040.git",
-    github: "https://github.com/PramithaMJ/GroupProject_POS_3990_4040.git",
-  },
-  {
     id: 5,
+    name: "Student Management System",
+    image: SM,
+    description:
+      "The Student Management System is a desktop application developed using WPF (Windows Presentation Foundation). Basic CRUD operations are available in this desktop application to maintain a Student Management System.",
+    tags: ["C#", "WPF", "MVVM Architecture"],
+    demo: "https://github.com/PramithaMJ/Student_Management_Stystem_3990.git",
+    github: "https://github.com/PramithaMJ/Student_Management_Stystem_3990.git",
+  },
+  {
+    id: 6,
     name: "Predicting Loan Repayment Risk Detection",
     image: Ml,
     description: "Prediction the Loan Repayment Risk",
@@ -81,7 +83,7 @@ export const Work = [
       "https://github.com/PramithaMJ/Predicting-Loan-Repayment-Risk-Detection.git",
   },
   {
-    id: 6,
+    id: 7,
     name: "Vehicle tracking Application",
     image: Vt,
     description:
@@ -99,7 +101,7 @@ export const Work = [
     github: "https://github.com/codebucks27/React-Redux-Todo-App",
   },
   {
-    id: 7,
+    id: 8,
     name: "Grocessary Application",
     image: Ga,
     description:
@@ -109,7 +111,7 @@ export const Work = [
     github: "https://github.com/codebucks27/React-Redux-Todo-App",
   },
   {
-    id: 8,
+    id: 9,
     name: "TickTockClone",
     image: Tc,
     description:
@@ -117,16 +119,6 @@ export const Work = [
     tags: ["#Kotliune", "JetPackcompose"],
     demo: "https://github.com/PramithaMJ/TikTokClone.git",
     github: "https://github.com/PramithaMJ/TikTokClone.git",
-  },
-  {
-    id: 9,
-    name: "Student Management System",
-    image: SM,
-    description:
-      "The Student Management System is a desktop application developed using WPF (Windows Presentation Foundation). Basic CRUD operations are available in this desktop application to maintain a Student Management System.",
-    tags: ["C#", "WPF", "MVVM Architecture"],
-    demo: "https://github.com/PramithaMJ/Student_Management_Stystem_3990.git",
-    github: "https://github.com/PramithaMJ/Student_Management_Stystem_3990.git",
   },
   {
     id: 10,
@@ -175,7 +167,7 @@ export const Work = [
     github: "https://github.com/PramithaMJ/nextJs_blogger_App.git",
   },
   {
-    id: 13,
+    id: 14,
     name: "Quiz App Backend",
     image: Cb,
     description:
@@ -185,7 +177,7 @@ export const Work = [
     github: "https://github.com/PramithaMJ/Spring-Microservises.git",
   },
   {
-    id: 14,
+    id: 15,
     name: "Omi Game Network",
     image: Omi,
     description:
@@ -194,4 +186,103 @@ export const Work = [
     demo: "https://github.com/PramithaMJ/Omi-Game.git",
     github: "https://github.com/PramithaMJ/Omi-Game.git",
   },
+  {
+    id: 17,
+    name: "Ballerina Lint",
+    image: ProjectPlaceholder,
+    description: "A fully functional Ballerina best practices checker as a VS Code extension",
+    tags: ["Ballerina", "VS Code Extension", "TypeScript"],
+    demo: "https://marketplace.visualstudio.com/items?itemName=PramithaMJ.ballerina-lint",
+    github: "https://github.com/PramithaMJ/ballerina-lint"
+  },
+  {
+    id: 18,
+    name: "GoNexus",
+    image: ProjectPlaceholder,
+    description: "GoNexus is a VSCode extension that helps you maintain high-quality Go code by analyzing your codebase for best practices, potential issues, and security vulnerabilities",
+    tags: ["Go", "VS Code Extension", "Static Analysis"],
+    demo: "https://marketplace.visualstudio.com/items?itemName=PramithaMJ.gonexus",
+    github: "https://github.com/PramithaMJ/gonexus"
+  },
+  {
+    id: 19,
+    name: "CPU Scheduling Visualizer",
+    image: ProjectPlaceholder,
+    description: "This web-based tool allows you to visualize various CPU scheduling algorithms, including FCFS, SJF, Priority Scheduling, and Round Robin.",
+    tags: ["Web", "Algorithms", "Visualization", "OS"],
+    demo: "https://pramithamj.github.io/cpu-scheduling-visualizer",
+    github: "https://github.com/PramithaMJ/cpu-scheduling-visualizer"
+  },
+  {
+    id: 20,
+    name: "Fully Completed Microservices Learning Platform",
+    image: ProjectPlaceholder,
+    description: "This project is a comprehensive microservices architecture developed using Java, Spring Boot, and Spring Cloud. Additionally, it incorporates Apache Kafka for messaging purposes.",
+    tags: ["Java", "Spring Boot", "Spring Cloud", "Kafka", "Microservices"],
+    demo: "https://github.com/PramithaMJ/fully-completed-microservices-Java-Springboot",
+    github: "https://github.com/PramithaMJ/fully-completed-microservices-Java-Springboot"
+  },
+  {
+    id: 21,
+    name: "Slack SDK Go",
+    image: ProjectPlaceholder,
+    description: "A lightweight and modular SDK for building Slack bots and apps in Go. With this SDK, you can easily send messages, manage users, and extend functionality to integrate with the Slack API seamlessly.",
+    tags: ["Go", "Slack API", "SDK"],
+    demo: "https://github.com/PramithaMJ/slack-sdk-go",
+    github: "https://github.com/PramithaMJ/slack-sdk-go"
+  },
+  {
+    id: 24,
+    name: "Secure file transfer protocol",
+    image: ProjectPlaceholder,
+    description: "This project implements a secure file transfer protocol that ensures confidentiality, integrity, and protection against replay attacks.",
+    tags: ["Java", "Security", "Cryptography"],
+    demo: "https://github.com/PramithaMJ/secure-file-transfer-protocol",
+    github: "https://github.com/PramithaMJ/secure-file-transfer-protocol"
+  },
+  {
+    id: 25,
+    name: "Vice Chancellor’s Awards and Academic Sessions 2026",
+    image: ProjectPlaceholder,
+    description: "Official Vice Chancellor’s Awards and Academic Sessions 2026 website. University of Ruhuna.",
+    tags: ["Web", "Official"],
+    demo: "https://as2026.eng.ruh.ac.lk/",
+    github: "#"
+  },
+  {
+    id: 26,
+    name: "C Code scanner and vulnerability identifier",
+    image: ProjectPlaceholder,
+    description: "C-Code-Scanner-And-Vulnerability-Identifier scans C source code for vulnerabilities, offering automated analysis, detailed reports, and security recommendations for developers.",
+    tags: ["C", "Security", "Vulnerability Scanner"],
+    demo: "https://github.com/PramithaMJ/C-Code-Scanner-And-Vulnerability-Identifier",
+    github: "https://github.com/PramithaMJ/C-Code-Scanner-And-Vulnerability-Identifier"
+  },
+  {
+    id: 27,
+    name: "High Performance Parallel Search Engine",
+    image: ProjectPlaceholder,
+    description: "The project involves implementing core search engine components, a crawler, a tokenizer, an inverted index builder, and a query processor, with sophisticated features such as TF-IDF and BM25 ranking.",
+    tags: ["HPC", "C", "Search Engine", "Parallel Computing"],
+    demo: "https://github.com/PramithaMJ/High-Performance-Parallel-Search-Engine",
+    github: "https://github.com/PramithaMJ/High-Performance-Parallel-Search-Engine"
+  },
+  {
+    id: 28,
+    name: "Job analysis MapReduce",
+    image: ProjectPlaceholder,
+    description: "Analyzes job market data using both Hadoop MapReduce and Apache Spark frameworks.",
+    tags: ["Hadoop", "MapReduce", "Spark", "Big Data"],
+    demo: "https://github.com/PramithaMJ/job-analysis-MapReduce",
+    github: "https://github.com/PramithaMJ/job-analysis-MapReduce"
+  },
+  {
+    id: 29,
+    name: "Thread Lifecycle Visualizer",
+    image: ProjectPlaceholder,
+    description: "An interactive web-based visualization tool for understanding thread lifecycle states and transitions.",
+    tags: ["Multithreading", "Visualization", "Education"],
+    demo: "#",
+    github: "#"
+  }
 ];
