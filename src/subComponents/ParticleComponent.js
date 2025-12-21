@@ -7,7 +7,7 @@ import ConfigSnow from "../config/particlesjs-config-snow.json";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-import SantaImg from "../assets/santa-sleigh.png";
+import SantaImg from "../assets/Santas-Sleigh-And-Reindeer-Silhouette.svg";
 
 const Box = styled.div`
   position: absolute;
@@ -33,7 +33,7 @@ const Sleigh = styled.img`
   z-index: 1;
   animation: ${fly} 20s linear infinite;
   opacity: 0.8;
-  mix-blend-mode: screen;
+  filter: invert(1);
   
   @media (max-width: 768px) {
     width: 8rem;
